@@ -2,5 +2,5 @@
 [gimmick:theme](cyborg)
 
 [Home](index.md)
-[About](about.md)
+[About](abort.md)
 [Download](download.md)
