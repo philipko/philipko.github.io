@@ -1,7 +1,5 @@
 # philipko
 [gimmick:theme](bootstrap)
-
-[Home](index.md)
 [API]()
 
 * [API-1](api/api_1.md)
