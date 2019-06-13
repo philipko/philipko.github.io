@@ -1,5 +1,5 @@
 # philipko
-[gimmick:theme (inverse: true)](bootstrap)
+[gimmick:theme](bootstrap)
 
 [Home](index.md)
 [About](abort.md)
