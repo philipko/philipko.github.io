@@ -1,6 +1,6 @@
 # philipko
 [gimmick:theme](bootstrap)
-[API]()
+[Document]()
 
 * [API-1](api/api_1.md)
 * [API-2](api/api_1.md)
