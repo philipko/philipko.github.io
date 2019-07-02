@@ -10,7 +10,7 @@ SELECT table_schema AS "Database", SUM(data_length + index_length) / 1024 / 1024
 
 ```
 
-<https://stackoverflow.com/questions/1733507/how-to-get-size-of-mysql-database>
+[how-to-get-size-of-mysql-database](https://stackoverflow.com/questions/1733507/how-to-get-size-of-mysql-database)
 
 create user & db 權限
 ----------
