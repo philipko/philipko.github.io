@@ -135,3 +135,53 @@ SELECT COUNT(1) AS cnt
 
 [MySQL產生測試資料的方法之二](https://ithelp.ithome.com.tw/articles/10147387?sc=pt)
 
+
+show open database connections
+----------
+
+```
+
+mysql> show status like 'Conn%';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| Connections   | 8     | 
++---------------+-------+
+1 row in set (0.00 sec)
+
+
+mysql> show status like '%onn%';
++--------------------------+-------+
+| Variable_name            | Value |
++--------------------------+-------+
+| Aborted_connects         | 0     | 
+| Connections              | 8     | 
+| Max_used_connections     | 4     | 
+| Ssl_client_connects      | 0     | 
+| Ssl_connect_renegotiates | 0     | 
+| Ssl_finished_connects    | 0     | 
+| Threads_connected        | 4     | 
++--------------------------+-------+
+7 rows in set (0.00 sec)
+
+```
+
+[MySQL show status: How to show open database connections](https://alvinalexander.com/blog/post/mysql/how-show-open-database-connections-mysql)
+
+
+MySQL show processlist
+----------
+
+```
+mysql> show processlist;
++----+------+-----------------+--------+---------+------+-------+------------------+
+| Id | User | Host            | db     | Command | Time | State | Info             |
++----+------+-----------------+--------+---------+------+-------+------------------+
+|  3 | root | localhost       | webapp | Query   |    0 | NULL  | show processlist | 
+|  5 | root | localhost:61704 | webapp | Sleep   |  208 |       | NULL             | 
+|  6 | root | localhost:61705 | webapp | Sleep   |  208 |       | NULL             | 
+|  7 | root | localhost:61706 | webapp | Sleep   |  208 |       | NULL             | 
++----+------+-----------------+--------+---------+------+-------+------------------+
+4 rows in set (0.00 sec)
+
+```
