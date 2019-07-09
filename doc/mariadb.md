@@ -139,6 +139,8 @@ SELECT COUNT(1) AS cnt
 show open database connections
 ----------
 
+SHOW STATUS WHERE `variable_name` = 'Max_used_connections';
+
 ```
 
 mysql> show status like 'Conn%';
@@ -185,3 +187,4 @@ mysql> show processlist;
 4 rows in set (0.00 sec)
 
 ```
+
