@@ -188,3 +188,12 @@ mysql> show processlist;
 
 ```
 
+monitor Galera cluster status from command line
+----------
+
+```
+SHOW STATUS LIKE 'wsrep%';
+
+```
+
+[How to monitor MariaDB Galera cluster status from command line](https://serverfault.com/questions/676048/how-to-monitor-mariadb-galera-cluster-status-from-command-line)
