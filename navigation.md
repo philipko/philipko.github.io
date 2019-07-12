@@ -3,7 +3,7 @@
 [Document]()
 
 * [API-1](api/api_1.md)
-* [API-2](api/api_1.md)
+* [Git](doc/git.md)
 * [Mariadb](doc/mariadb.md)
 * [Command](doc/command.md)
 * [Tool](doc/tool.md)
