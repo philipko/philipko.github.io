@@ -225,3 +225,4 @@ $bulk->delete(['user_id' => 2], ['limit' => 0]);   // limit 為 0 時，刪除�
 ```
 
 [php7的mongodb基本用法](https://www.itread01.com/content/1545617347.html)
+[mongodb中字串日期的比較](https://www.itread01.com/content/1546274175.html)
