@@ -36,6 +36,26 @@ mongo shell command
 
 
 ```
+
+#建立資料庫
+use DATABASE_NAME
+
+#檢視資料庫
+show dbs
+
+#刪除當前資料庫
+db.dropDatabase()
+
+#刪除集合
+db.collectionName.drop()
+
+
+
+#插入文件 insert() 或 save()
+db.COLLECTION_NAME.insert(document)
+
+ex:
+
 db.user_device.insert(
   {
      "userid":"111111",
@@ -62,8 +82,146 @@ db.user_device.insert(
   }
 )
 
+
+#更新文件 update()，save()
+db.collection.update(
+   <query>,
+   <update>,
+   {
+     upsert: <boolean>,
+     multi: <boolean>,
+     writeConcern: <document>
+   }
+)
+
+#查詢文件 find()
+db.collection.find(query, projection)
+
+ex:
+
 db.user_device.find()
 
 db.user_device.find({"userid":"111111"})
 
+
+
+
 ```
+
+
+[Mongodb 基本用法](https://www.itread01.com/content/1545639315.html)
+
+PHP sample code
+----------
+
+```
+<?php
+//連結mongodb
+$manager = new MongoDB\Driver\Manager('mongodb://root:[email protected]:27017');
+```
+
+root 使用者；123：密碼；如果沒有密碼則不寫
+
+
+查詢
+
+```
+<?php
+
+//連結mongodb
+$manager = new MongoDB\Driver\Manager('mongodb://root:[email protected]:27017');
+
+//查詢
+$filter =  ['user_id'=>['$gt'=>0]]; //查詢條件 user_id大於0
+$options = [
+   'projection' => ['_id' => 0], //不輸出_id欄位
+   'sort' => ['user_id'=>-1] //根據user_id欄位排序 1是升序，-1是降序
+];
+$query = new MongoDB\Driver\Query($filter, $options); //查詢請求
+$list = $manager->executeQuery('location.box',$query); // 執行查詢 location資料庫下的box集合
+
+
+foreach ($list as $document) {
+    print_r($document); 
+}
+
+```
+
+新增
+
+```
+<?php
+
+//連結mongodb
+$manager = new MongoDB\Driver\Manager('mongodb://root:[email protected]:27017');
+
+$bulk = new MongoDB\Driver\BulkWrite; //預設是有序的，序列執行
+//$bulk = new MongoDB\Driver\BulkWrite(['ordered' => flase]);//如果要改成無序操作則加flase，並行執行
+$bulk->insert(['user_id' => 2, 'real_name'=>'中國',]);
+$bulk->insert(['user_id' => 3, 'real_name'=>'中國人',]);
+$manager->executeBulkWrite('location.box', $bulk); //執行寫入 location資料庫下的box集合
+
+```
+
+修改
+
+```
+<?php
+
+//連結mongodb
+$manager = new MongoDB\Driver\Manager('mongodb://root:[email protected]:27017');
+
+$bulk = new MongoDB\Driver\BulkWrite; //預設是有序的，序列執行
+//$bulk = new MongoDB\Driver\BulkWrite(['ordered' => flase]);//如果要改成無序操作則加flase，並行執行
+$bulk->update(
+	['user_id' => 2],
+	['$set'=>['real_name'=>'中國國']
+]); 
+//$set相當於mysql的 set，這裡和mysql有兩個不同的地方，
+//1：欄位不存在會新增一個欄位;
+//2：mongodb預設如果條件不成立，新增加資料，相當於insert
+
+
+//如果條件不存在不新增加，可以通過設定upsert
+//db.collectionName.update(query, obj, upsert, multi);
+
+$bulk->update(
+	['user_id' => 5],
+	[
+		'$set'=>['fff'=>'中國國']
+	],
+	['multi' => true, 'upsert' => false] 
+	//multi為true,則滿足條件的全部修改,預設為true，如果改為false，則只修改滿足條件的第一條
+	//upsert為 treu：表示不存在就新增
+);
+$manager->executeBulkWrite('location.box', $bulk); //執行寫入 location資料庫下的box集合
+```
+ordered 設定
+
+1：預設是ture，按照順序執行插入更新資料，如果出錯，停止執行後面的，mongo官方叫序列。
+2：如果是false，mongo併發的方式插入更新資料，中間出現錯誤，不影響後續操作無影響，mongo官方叫並行
+
+
+刪除
+
+```
+<?php
+
+//連結mongodb
+$manager = new MongoDB\Driver\Manager('mongodb://root:[email protected]:27017');
+
+$bulk = new MongoDB\Driver\BulkWrite; //預設是有序的，序列執行
+//$bulk = new MongoDB\Driver\BulkWrite(['ordered' => flase]);//如果要改成無序操作則加flase，並行執行
+$bulk->delete(['user_id'=>5]);//刪除user_id為5的欄位
+$manager->executeBulkWrite('location.box', $bulk); //執行寫入 location資料庫下的box集合
+```
+
+delete還可以通過limit設定不同刪除方式
+
+```
+$bulk->delete(['user_id' => 1], ['limit' => 1]);   // limit 為 1 時，刪除第一條匹配資料
+$bulk->delete(['user_id' => 2], ['limit' => 0]);   // limit 為 0 時，刪除所有匹配資料，預設刪除所有
+
+```
+
+[php7的mongodb基本用法](https://www.itread01.com/content/1545617347.html)
