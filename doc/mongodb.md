@@ -17,7 +17,6 @@ docker run -d --name mongo --restart=always -p 27017:27017 -v  /path/datadir:/da
 ```
 
 
-
 SQL VS MongoDB 
 ----------
 
@@ -111,6 +110,18 @@ db.user_device.find({"userid":"111111"})
 
 [Mongodb 基本用法](https://www.itread01.com/content/1545639315.html)
 
+
+Mongodb 查询指定时间范围的数据
+----------
+
+```
+db.things.find({"createTime":{"$gt":"2015-5-21 0:0:0"}}) // 大于某个时间
+db.things.find({"createTime":{"$lt":"2014-5-21 0:0:0"}}) // 小于某个时间
+db.things.find({"$and":[{"createTime":{"$gt":"2015-5-21 0:0:0"}},{"createTime":{"$lt":"2015-5-22 0:0:0"}}]}) // 某个时间段
+```
+[mongodb中字串日期的比較](https://www.itread01.com/content/1546274175.html)
+[Mongodb 查询指定时间范围的数据](https://blog.csdn.net/u011368551/article/details/81219820)
+[Find objects between two dates MongoDB](https://stackoverflow.com/questions/2943222/find-objects-between-two-dates-mongodb)
 PHP sample code
 ----------
 
@@ -225,4 +236,6 @@ $bulk->delete(['user_id' => 2], ['limit' => 0]);   // limit 為 0 時，刪除�
 ```
 
 [php7的mongodb基本用法](https://www.itread01.com/content/1545617347.html)
-[mongodb中字串日期的比較](https://www.itread01.com/content/1546274175.html)
+
+
+
