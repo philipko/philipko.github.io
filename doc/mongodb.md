@@ -115,10 +115,9 @@ Mongodb 查询指定时间范围的数据
 ----------
 
 ```
-db.CollectionName.find({"whenCreated": {
-    '$gte': ISODate("2018-03-06T13:10:40.294Z"),
-    '$lt': ISODate("2018-05-06T13:10:40.294Z")
-}});
+db.CollectionName.find({"whenCreated": {'$gte': ISODate("2018-03-06T13:10:40.294Z"),'$lt': ISODate("2018-05-06T13:10:40.294Z")}});
+db.CollectionName.find({"timestamp": {'$gte': "2019-07-17 00:00:00",'$lt': "2019-07-17 23:12:59"}})
+db.user_device_log_201907.find({"userid":"XXXXXXXXXXX","timestamp": {'$gte': "2019-07-16 00:00:00",'$lt': "2019-07-16 23:59:59"}})
 
 db.things.find({"createTime":{"$gt":"2015-5-21 0:0:0"}}) // 大于某个时间
 db.things.find({"createTime":{"$lt":"2014-5-21 0:0:0"}}) // 小于某个时间
@@ -127,6 +126,41 @@ db.things.find({"$and":[{"createTime":{"$gt":"2015-5-21 0:0:0"}},{"createTime":{
 [mongodb中字串日期的比較](https://www.itread01.com/content/1546274175.html)
 [Mongodb 查询指定时间范围的数据](https://blog.csdn.net/u011368551/article/details/81219820)
 [Find objects between two dates MongoDB](https://stackoverflow.com/questions/2943222/find-objects-between-two-dates-mongodb)
+
+
+How to query mongodb Date using php
+----------
+
+
+```
+$startOfDay=date('Y-m-d',strtotime('2013-09-02 12:21:55'))
+$endOfDay=date('Y-m-d',strtotime('2013-09-02 12:21:55'))
+
+// Both points/seconds inclusive
+->find(array("date" => array('$gte' => $startOfDay, '$lte' => $endOfDay)));
+// Both seconds exclusive
+->find(array("date" => array('$gt' => $startOfDay, '$lt' => $endOfDay)));
+
+```
+
+[How to query mongodb Date using php](https://stackoverflow.com/questions/19207222/how-to-query-mongodb-date-using-php)
+
+
+search for documents where 5 < x < 20
+----------
+
+```
+$rangeQuery = array('x' => array( '$gt' => 5, '$lt' => 20 ));
+
+```
+or above example the answer comes to be:
+
+```
+$rangeQuery = ['avg' => ['$gt' => '50' ]];
+$rs=$collection->find($rangeQuery);
+```
+
+
 PHP sample code
 ----------
 
