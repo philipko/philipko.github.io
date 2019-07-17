@@ -30,6 +30,16 @@ SQL VS MongoDB
 
 [MongoDB 基礎入門教學：MongoDB Shell 篇](https://blog.gtwang.org/programming/getting-started-with-mongodb-shell-1/)
 
+
+SQL query 對應 mongodb 的表格 
+----------
+
+
+
+[mongodb group by](https://mlwmlw.org/2015/03/mongodb-group-by/)
+[SQL query 對應 mongodb 的表格 ](https://nosqlbooster.com/featuresForSQL)
+
+
 mongo shell command
 ----------
 
