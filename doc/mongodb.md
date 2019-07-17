@@ -115,6 +115,11 @@ Mongodb 查询指定时间范围的数据
 ----------
 
 ```
+db.CollectionName.find({"whenCreated": {
+    '$gte': ISODate("2018-03-06T13:10:40.294Z"),
+    '$lt': ISODate("2018-05-06T13:10:40.294Z")
+}});
+
 db.things.find({"createTime":{"$gt":"2015-5-21 0:0:0"}}) // 大于某个时间
 db.things.find({"createTime":{"$lt":"2014-5-21 0:0:0"}}) // 小于某个时间
 db.things.find({"$and":[{"createTime":{"$gt":"2015-5-21 0:0:0"}},{"createTime":{"$lt":"2015-5-22 0:0:0"}}]}) // 某个时间段
