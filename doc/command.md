@@ -13,6 +13,24 @@ sudo ufw default deny // 關閉所有連線
 
 sudo ufw allow ssh  // 使用服務名稱來允許連入，服務名稱請參考 /etc/services 檔案 
 sudo ufw allow  in 8080  // 指定 Port 號來允許連入 
+
+sudo ufw allow 80 # 允許 80
+sudo ufw allow 443 # 允許 443
+sudo ufw deny 3389 # 封鎖 3389
+sudo ufw deny 21 # 封鎖 21
+
+sudo ufw allow 6000:6007/tcp # 允許 TCP 6000~6007
+sudo ufw allow 6000:6007/udp # 允許 UDP 6000~6007
+
+sudo ufw allow from 192.168.11.10 # 允許 192.168.11.10 的所有連線
+sudo ufw allow from 192.168.11.0/24 # 允許 192.168.11.1~192.168.11.255 的所有連線
+sudo ufw deny from 192.168.11.4 # 封鎖 192.168.11.4 的所有連線
+
+sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 80 proto tcp #Allow port 80 to localhost but only from localhost
+sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 11211 proto tcp
+sudo ufw allow from 192.168.5.123 to 127.0.0.1 port 11211 proto tcp
+
+
 sudo ufw deny out 4662  // 指定 Port 號來拒絕連出到別台電腦的指定 Port 號 
 sudo ufw deny in 4662/udp  // 指定 Port 號來拒絕接受指定 Port 號的 UDP 連入要求
 
@@ -24,7 +42,14 @@ sudo ufw logging on 啟動工作日誌
 sudo ufw status //檢視規則狀態
 sudo ufw status verbose  //檢視規則狀態
 
+
+
+
+
 ```
+
+[ufw：簡易防火牆設置](https://noob.tw/ufw/)
+
 防火牆 確認可行無問題的
 ----------
 
