@@ -40,6 +40,14 @@ SQL query 對應 mongodb 的表格
 [SQL query 對應 mongodb 的表格 ](https://nosqlbooster.com/featuresForSQL)
 
 
+MongoDB GroupBy操作， 結果集大小限制問題
+----------
+
+[MongoDB GroupBy操作， 結果集大小限制問題](https://codertw.com/%E8%B3%87%E6%96%99%E5%BA%AB/11111/)
+
+
+
+
 mongo shell command
 ----------
 

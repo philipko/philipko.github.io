@@ -25,6 +25,26 @@ sudo ufw status //檢視規則狀態
 sudo ufw status verbose  //檢視規則狀態
 
 ```
+防火牆 確認可行無問題的
+----------
+
+```
+sudo ufw enable // 啟動防火牆，reboot還是存在直到關閉。
+sudo ufw allow ssh  // 使用服務名稱來允許連入，服務名稱請參考 /etc/services 檔案 
+sudo ufw status
+
+~$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere
+22/tcp (v6)                ALLOW       Anywhere (v6)
+
+
+```
+
+
 
 lsof
 ----------

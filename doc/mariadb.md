@@ -197,3 +197,19 @@ SHOW STATUS LIKE 'wsrep%';
 ```
 
 [How to monitor MariaDB Galera cluster status from command line](https://serverfault.com/questions/676048/how-to-monitor-mariadb-galera-cluster-status-from-command-line)
+
+
+MySQL InnoDB foreign key between different databases
+----------
+
+Below is how to add a foreign key on table t2, reference from table db1.historial(codh):
+
+```
+alter table t2
+add foreign key FK_t2(micod2)
+    references db1.historial(codh)
+    on delete cascade
+    on update cascade;
+```
+
+[MySQL InnoDB foreign key between different databases](https://stackoverflow.com/questions/3905013/mysql-innodb-foreign-key-between-different-databases)
