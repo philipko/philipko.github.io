@@ -11,24 +11,32 @@ sudo ufw disable // 停用防火牆，reboot還是存在直到再度開啟。
 sudo ufw default allow // 接收所以連線
 sudo ufw default deny // 關閉所有連線
 
+// 默認情況下，UFW設置為拒絕所有傳入連接並允許所有傳出連接
+sudo ufw default deny incoming  
+sudo ufw default allow outgoing  
+
 sudo ufw allow ssh  // 使用服務名稱來允許連入，服務名稱請參考 /etc/services 檔案 
 sudo ufw allow  in 8080  // 指定 Port 號來允許連入 
 
-sudo ufw allow 80 # 允許 80
-sudo ufw allow 443 # 允許 443
-sudo ufw deny 3389 # 封鎖 3389
-sudo ufw deny 21 # 封鎖 21
+sudo ufw allow 80 // 允許 80
+sudo ufw allow 443 // 允許 443
+sudo ufw deny 3389 // 封鎖 3389
+sudo ufw deny 21 // 封鎖 21
 
-sudo ufw allow 6000:6007/tcp # 允許 TCP 6000~6007
-sudo ufw allow 6000:6007/udp # 允許 UDP 6000~6007
+sudo ufw allow 6000:6007/tcp // 允許 TCP 6000~6007
+sudo ufw allow 6000:6007/udp // 允許 UDP 6000~6007
 
 sudo ufw allow from 192.168.11.10 # 允許 192.168.11.10 的所有連線
 sudo ufw allow from 192.168.11.0/24 # 允許 192.168.11.1~192.168.11.255 的所有連線
 sudo ufw deny from 192.168.11.4 # 封鎖 192.168.11.4 的所有連線
 
-sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 80 proto tcp #Allow port 80 to localhost but only from localhost
+sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 80 proto tcp // Allow port 80 to localhost but only from localhost
 sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 11211 proto tcp
 sudo ufw allow from 192.168.5.123 to 127.0.0.1 port 11211 proto tcp
+
+
+sudo ufw allow from 203.0.113.0/24 // 想允許所有的IP地址範圍從203.0.113.1到203.0.113.254
+sudo ufw allow from 203.0.113.0/24 to any port 22 // 203.0.113.0/24允許子網連接的用端口22（SSH）
 
 
 sudo ufw deny out 4662  // 指定 Port 號來拒絕連出到別台電腦的指定 Port 號 
@@ -48,7 +56,9 @@ sudo ufw status verbose  //檢視規則狀態
 
 ```
 
+[如何在Debian 9上使用UFW設置防火牆](https://jujula.org/zh-hant/node/26)
 [ufw：簡易防火牆設置](https://noob.tw/ufw/)
+
 
 防火牆 確認可行無問題的
 ----------
@@ -57,6 +67,12 @@ sudo ufw status verbose  //檢視規則狀態
 sudo ufw enable // 啟動防火牆，reboot還是存在直到關閉。
 sudo ufw allow ssh  // 使用服務名稱來允許連入，服務名稱請參考 /etc/services 檔案 
 sudo ufw status
+// 默認情況下，UFW設置為拒絕所有傳入連接並允許所有傳出連接
+sudo ufw default deny incoming  
+sudo ufw default allow outgoing  
+
+
+
 
 ~$ sudo ufw status
 Status: active
