@@ -7,6 +7,7 @@
 * [Mariadb](doc/mariadb.md)
 * [MongoDB](doc/mongodb.md)
 * [PHP](doc/php.md)
+* [RancherOS](doc/rancheros.md)
 * [Command](doc/command.md)
 * [Tool](doc/tool.md)
 
