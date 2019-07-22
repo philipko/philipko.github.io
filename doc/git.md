@@ -12,6 +12,15 @@ git log --all --decorate --oneline --graph
 [Pretty git branch graphs](https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs)
 
 
+Please, oh please, use git pull --rebase
+----------
+
+```
+git pull --rebase
+
+```
+
+[Able to push to all git remotes with the one command?](https://coderwall.com/p/7aymfa/please-oh-please-use-git-pull-rebase)
 
 Able to push to all git remotes with the one command?
 ----------
