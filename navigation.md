@@ -11,6 +11,7 @@
 * [Mariadb](doc/mariadb.md)
 * [MongoDB](doc/mongodb.md)
 * [PHP](doc/php.md)
+* [Proxmox VE](doc/proxmoxve.md)
 * [RancherOS](doc/rancheros.md)
 * [Tool](doc/tool.md)
 
