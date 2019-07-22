@@ -8,6 +8,11 @@ Docs
 [RancherOS github](https://github.com/rancher/os)
 
 
+System Block
+----------
+
+![](https://rancher.com/docs/img/os/rancheroshowitworks.png)
+
 Commands
 ----------
 
