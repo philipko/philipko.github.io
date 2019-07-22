@@ -14,6 +14,7 @@
 * [PHP](doc/php.md)
 * [Proxmox VE](doc/proxmoxve.md)
 * [RancherOS](doc/rancheros.md)
+* [SQL](doc/sql.md)
 * [Tool](doc/tool.md)
 
 [Download](download.md)
