@@ -36,7 +36,6 @@ flush privileges;
 
 ```
 
-
 MySQL產生大量測試資料的方法
 ----------
 
@@ -198,7 +197,6 @@ SHOW STATUS LIKE 'wsrep%';
 
 [How to monitor MariaDB Galera cluster status from command line](https://serverfault.com/questions/676048/how-to-monitor-mariadb-galera-cluster-status-from-command-line)
 
-
 MySQL InnoDB foreign key between different databases
 ----------
 
@@ -213,3 +211,10 @@ add foreign key FK_t2(micod2)
 ```
 
 [MySQL InnoDB foreign key between different databases](https://stackoverflow.com/questions/3905013/mysql-innodb-foreign-key-between-different-databases)
+
+
+Backup
+----------
+
+[mysql備份工具lvm-snapshot實戰](https://www.itread01.com/content/1542348133.html)
+[MySQL基于LVM快照的备份恢复](https://blog.51cto.com/zhaochj/1632736)
