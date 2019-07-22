@@ -121,3 +121,12 @@ lsof -i TCP -s TCP:ESTABLISHED
 ```
 
 [Linux 列出行程開啟的檔案，lsof 指令用法教學與範例](https://blog.gtwang.org/linux/linux-lsof-command-list-open-files-tutorial-examples/)
+
+
+Generating a new SSH key
+----------
+
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+[Connecting to GitHub with SSH](https://help.github.com/en/articles/connecting-to-github-with-ssh)
