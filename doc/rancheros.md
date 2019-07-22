@@ -22,3 +22,8 @@ udo system-docker ps
 
 ```
 
+Install Proxmox, RancherOS, in a VM with Rancher 2.0 and Portainer
+----------
+
+[Install Proxmox, RancherOS, in a VM with Rancher 2.0 and Portainer](https://gist.github.com/mow4cash/a57e893fc640ccf3720e99fc6b3b879a)
+
