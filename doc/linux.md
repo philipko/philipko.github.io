@@ -1,5 +1,12 @@
 Linux Note
 =======
+
+
+增大 Ubuntu 18.04 上 root lvm volume
+----------
+
+[增大 Ubuntu 18.04 上 root lvm volume](https://blog.moa.tw/2018/12/ubuntu-1804-root-lvm-volume.html)
+
 LVM
 ----------
 
