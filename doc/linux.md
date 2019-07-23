@@ -10,10 +10,11 @@ LVM
 System Block
 ----------
 
-![](https://i1.wp.com/manjaro.site/wp-content/uploads/2017/08/lvm-on-ubuntu.png?zoom=1.5625&resize=678%2C381&ssl=1)
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/LVM1.svg/500px-LVM1.svg.png)
+![](http://linux.vbird.org/linux_basic/0420quota/lvm.gif)
+
 
 [邏輯捲軸管理員](https://zh.wikipedia.org/wiki/%E9%82%8F%E8%BC%AF%E6%8D%B2%E8%BB%B8%E7%AE%A1%E7%90%86%E5%93%A1)
+[LVM2學習筆記](http://maxubuntu.blogspot.com/2010/05/lvm2.html)
 
 增大 Ubuntu 18.04 上 root lvm volume
 ----------
@@ -29,6 +30,8 @@ System Block
 sudo hdparm -I /dev/your_device |grep GB
 lsblk
 cfdisk
+sudo vgs
+sudo lvs
 sudo pvdisplay
 sudo lvdisplay
 sudo vgdisplay -v
@@ -109,3 +112,4 @@ sudo lvresize -A n -l +100%FREE /dev/ubuntu-vg/ubuntu-lv //chang root size
 [鳥哥的LVM](http://linux.vbird.org/linux_basic/0420quota.php#lvm)
 [Ubuntu LVM 分割槽實戰](https://www.itread01.com/content/1549130614.html)
 [Linux LVM (建立、擴充、移除LVM磁區) 操作筆記](https://sc8log.blogspot.com/2017/03/linux-lvm-lvm.html)
+[LVM2學習筆記](http://maxubuntu.blogspot.com/2010/05/lvm2.html)
