@@ -27,6 +27,7 @@ System Block
 
 ```
 lsblk
+cfdisk
 sudo vgdisplay -v
 sudo lvresize -L +5G --resizefs  /dev/ubuntu-vg/ubuntu-lv //chang root size
 sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
@@ -75,6 +76,10 @@ tmpfs                              350M     0  350M   0% /run/user/1000
 
 [LVM-LV的容量增減設定(上)](https://ithelp.ithome.com.tw/articles/10081243)
 [增大 Ubuntu 18.04 上 root lvm volume](https://blog.moa.tw/2018/12/ubuntu-1804-root-lvm-volume.html)
+[增加 VirtualBox 虛擬硬碟大小（使用 GParted 調整分割區）](https://blog.gtwang.org/virtualization/resize-virtualbox-disk-image-manipulate-vdi/)
+[Increase partition size on which Ubuntu is installed?](https://askubuntu.com/questions/116351/increase-partition-size-on-which-ubuntu-is-installed)
+[SD SIZE 錯誤問題(GPT PMBR size mismatch 錯誤 故先修正錯誤再更改空間)](https://b8807053.pixnet.net/blog/post/348558754-sd-size-%E9%8C%AF%E8%AA%A4%E5%95%8F%E9%A1%8C)
+[使用LVM來擴充現有磁碟空間](https://blog.xuite.net/a851401/blog/54020537-%E4%BD%BF%E7%94%A8LVM%E4%BE%86%E6%93%B4%E5%85%85%E7%8F%BE%E6%9C%89%E7%A3%81%E7%A2%9F%E7%A9%BA%E9%96%93+Extends+existing+LV+using+LVM+)
 
 
 LVM Commands
