@@ -83,16 +83,6 @@ To                         Action      From
 22/tcp (v6)                ALLOW       Anywhere (v6)
 
 
-```
-
-LVM
-----------
-
-```
-lsblk
-```
-
-
 
 
 lsof

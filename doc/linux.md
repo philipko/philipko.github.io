@@ -26,6 +26,7 @@ System Block
   * 確實的將檔案系統容量增加(使用指令resize2fs)
 
 ```
+sudo hdparm -I /dev/your_device |grep GB
 lsblk
 cfdisk
 sudo vgdisplay -v
@@ -75,6 +76,7 @@ tmpfs                              350M     0  350M   0% /run/user/1000
 ```
 
 [LVM-LV的容量增減設定(上)](https://ithelp.ithome.com.tw/articles/10081243)
+[LVM-LV的容量增減設定(下)](https://ithelp.ithome.com.tw/articles/10081251)
 [增大 Ubuntu 18.04 上 root lvm volume](https://blog.moa.tw/2018/12/ubuntu-1804-root-lvm-volume.html)
 [增加 VirtualBox 虛擬硬碟大小（使用 GParted 調整分割區）](https://blog.gtwang.org/virtualization/resize-virtualbox-disk-image-manipulate-vdi/)
 [Increase partition size on which Ubuntu is installed?](https://askubuntu.com/questions/116351/increase-partition-size-on-which-ubuntu-is-installed)
