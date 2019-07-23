@@ -29,6 +29,8 @@ System Block
 sudo hdparm -I /dev/your_device |grep GB
 lsblk
 cfdisk
+sudo pvdisplay
+sudo lvdisplay
 sudo vgdisplay -v
 sudo lvresize -L +5G --resizefs  /dev/ubuntu-vg/ubuntu-lv //chang root size
 sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
