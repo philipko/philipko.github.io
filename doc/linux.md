@@ -84,6 +84,7 @@ tmpfs                              350M     0  350M   0% /run/user/1000
 [Increase partition size on which Ubuntu is installed?](https://askubuntu.com/questions/116351/increase-partition-size-on-which-ubuntu-is-installed)
 [SD SIZE 錯誤問題(GPT PMBR size mismatch 錯誤 故先修正錯誤再更改空間)](https://b8807053.pixnet.net/blog/post/348558754-sd-size-%E9%8C%AF%E8%AA%A4%E5%95%8F%E9%A1%8C)
 [使用LVM來擴充現有磁碟空間](https://blog.xuite.net/a851401/blog/54020537-%E4%BD%BF%E7%94%A8LVM%E4%BE%86%E6%93%B4%E5%85%85%E7%8F%BE%E6%9C%89%E7%A3%81%E7%A2%9F%E7%A9%BA%E9%96%93+Extends+existing+LV+using+LVM+)
+[Use LVM To Manage Storage Devices on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-use-lvm-to-manage-storage-devices-on-ubuntu-18-04#displaying-information-about-physical-volumes,-volume-groups,-and-logical-volumes)
 
 
 LVM Commands
