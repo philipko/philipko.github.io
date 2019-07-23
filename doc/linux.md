@@ -2,6 +2,11 @@ Linux Note
 =======
 
 
+
+
+LVM
+----------
+
 System Block
 ----------
 
@@ -71,8 +76,6 @@ tmpfs                              350M     0  350M   0% /run/user/1000
 [LVM-LV的容量增減設定(上)](https://ithelp.ithome.com.tw/articles/10081243)
 [增大 Ubuntu 18.04 上 root lvm volume](https://blog.moa.tw/2018/12/ubuntu-1804-root-lvm-volume.html)
 
-LVM
-----------
 
 LVM Commands
 ----------
