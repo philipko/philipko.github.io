@@ -2,6 +2,14 @@ Linux Note
 =======
 
 
+System Block
+----------
+
+![](https://i1.wp.com/manjaro.site/wp-content/uploads/2017/08/lvm-on-ubuntu.png?zoom=1.5625&resize=678%2C381&ssl=1)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/LVM1.svg/500px-LVM1.svg.png)
+
+[邏輯捲軸管理員](https://zh.wikipedia.org/wiki/%E9%82%8F%E8%BC%AF%E6%8D%B2%E8%BB%B8%E7%AE%A1%E7%90%86%E5%93%A1)
+
 增大 Ubuntu 18.04 上 root lvm volume
 ----------
 步驟大概歸納以下幾點 :
@@ -13,6 +21,7 @@ Linux Note
   * 確實的將檔案系統容量增加(使用指令resize2fs)
 
 ```
+lsblk
 sudo vgdisplay -v
 sudo lvresize -L +5G --resizefs  /dev/ubuntu-vg/ubuntu-lv //chang root size
 sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
@@ -68,6 +77,7 @@ LVM
 LVM Commands
 ----------
 ```
+lsblk
 sudo lvmdiskscan
 sudo lvmdiskscan -l
 sudo pvscan
