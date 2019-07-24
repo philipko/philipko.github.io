@@ -1,8 +1,5 @@
-Linux Note
+LVM Note
 =======
-
-
-
 
 LVM
 ----------

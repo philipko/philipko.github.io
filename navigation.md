@@ -8,7 +8,7 @@
 * [Docker](doc/docker.md)
 * [Git](doc/git.md)
 * [Glusterfs](doc/glusterfs.md)
-* [Linux](doc/linux.md)
+* [LVM](doc/lvm.md)
 * [Mariadb](doc/mariadb.md)
 * [MongoDB](doc/mongodb.md)
 * [PHP](doc/php.md)
