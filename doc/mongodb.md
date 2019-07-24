@@ -48,6 +48,7 @@ MongoDB GroupBy操作， 結果集大小限制問題
 
 
 
+
 mongo shell command
 ----------
 
@@ -177,6 +178,20 @@ or above example the answer comes to be:
 $rangeQuery = ['avg' => ['$gt' => '50' ]];
 $rs=$collection->find($rangeQuery);
 ```
+
+
+
+update duplicated documents in MongoDB?
+----------
+
+[How to update duplicated documents in MongoDB?](https://stackoverflow.com/questions/49616440/how-to-update-duplicated-documents-in-mongodb)
+
+
+
+Insert on duplicate key update using MongoDB
+----------
+
+[Insert on duplicate key update using MongoDB](https://dba.stackexchange.com/questions/208056/insert-on-duplicate-key-update-using-mongodb)
 
 
 PHP sample code
