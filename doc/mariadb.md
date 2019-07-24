@@ -12,6 +12,31 @@ SELECT table_schema AS "Database", SUM(data_length + index_length) / 1024 / 1024
 
 [how-to-get-size-of-mysql-database](https://stackoverflow.com/questions/1733507/how-to-get-size-of-mysql-database)
 
+get size of mysql database table
+----------
+
+
+```
+#Size of all tables:
+
+SELECT TABLE_NAME AS `Table`, ROUND(((DATA_LENGTH + INDEX_LENGTH) / 1024 / 1024),2) AS `Size (MB)` FROM  information_schema.TABLES WHERE   TABLE_SCHEMA = "DATABASE_NAME" ORDER BY (DATA_LENGTH + INDEX_LENGTH) DESC;
+
+
+#For specific table:
+
+SELECT TABLE_NAME AS `Table`, ROUND(((DATA_LENGTH + INDEX_LENGTH) / 1024 / 1024),2) AS `Size (MB)` FROM information_schema.TABLES
+WHERE
+    TABLE_SCHEMA = "news_alert"
+  AND
+    TABLE_NAME = "news"
+ORDER BY
+  (DATA_LENGTH + INDEX_LENGTH)
+DESC;
+
+```
+
+[get the sizes of the tables of a MySQL database?](https://stackoverflow.com/questions/9620198/how-to-get-the-sizes-of-the-tables-of-a-mysql-database)
+
 create user & db 權限
 ----------
 
