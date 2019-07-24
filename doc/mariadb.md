@@ -219,3 +219,4 @@ Backup
 [mysql備份工具lvm-snapshot實戰](https://www.itread01.com/content/1542348133.html)
 [MySQL基于LVM快照的备份恢复](https://blog.51cto.com/zhaochj/1632736)
 [Instant backup of a MySQL database with LVM snapshot · GitHub](https://gist.github.com/Godefroy/0f1d18d0a00179dadcaa)
+[Problems when Reinitalizing MySQL Replication using LVM on a very large Database](https://dba.stackexchange.com/questions/188084/problems-when-reinitalizing-mysql-replication-using-lvm-on-a-very-large-database)

@@ -13,6 +13,54 @@ System Block
 [邏輯捲軸管理員](https://zh.wikipedia.org/wiki/%E9%82%8F%E8%BC%AF%E6%8D%B2%E8%BB%B8%E7%AE%A1%E7%90%86%E5%93%A1)
 [LVM2學習筆記](http://maxubuntu.blogspot.com/2010/05/lvm2.html)
 
+Create PV,VG,LV
+----------
+
+```
+fdisk -l
+pvcreate /dev/sda5 /dev/sda6 //create pv
+vgcreate mygroup /dev/sda5 /dev/sda6 //create vg
+lvcreate -n mysqldata --size 3G mygroup  //creaet lv大小设置为3GB
+mke2fs -t ext4 /dev/mygroup/mysqldata //format lv to ext4
+blkid /dev/mygroup/mysqldata //get lv uuid
+/dev/mygroup/mysqldata: UUID="f863e626-e34e-4207-b9cb-7fbb9c5b7f1e" TYPE="ext4"
+vim /etc/fstab
+UUID=f863e626-e34e-4207-b9cb-7fbb9c5b7f1e /mnt/mydata   ext4   defaults 0 0
+mount -a 
+
+```
+
+[MySQL基于LVM快照的备份恢复](https://blog.51cto.com/zhaochj/1632736)
+
+
+Remove PV,VG,LV
+----------
+
+```
+umount /dev/myvg/homevol
+lvremove /dev/myvg/homevol
+vgremove my_volume_group
+```
+
+Snapshot LV
+----------
+
+```
+#snapshot LV
+lvcreate --size 10G --snapshot --name snapMY01 /dev/mapper/vg_01-lv_mysql00
+lvcreate --size 1G --snapshot --name snapDocker /dev/mapper/docker--vg-docker--lv
+mount YOUR_LV_PATH /mnt/snap 
+```
+
+Remove Snapshot LV
+----------
+
+```
+umount /mnt/snap 
+lvremove YOUR_LV_PATH
+
+```
+
 增大 Ubuntu 18.04 上 root lvm volume
 ----------
 步驟大概歸納以下幾點 :
