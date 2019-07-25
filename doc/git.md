@@ -22,6 +22,18 @@ git pull --rebase
 
 [Able to push to all git remotes with the one command?](https://coderwall.com/p/7aymfa/please-oh-please-use-git-pull-rebase)
 
+
+commands
+----------
+
+```
+
+git cherry-pick 6a498ec --no-commit
+
+```
+
+
+
 Able to push to all git remotes with the one command?
 ----------
 
