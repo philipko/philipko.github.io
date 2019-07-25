@@ -93,3 +93,34 @@ try {
 
 [如何在PHP和MongoDB中正确捕捉异常](http://cn.voidcc.com/question/p-nmwglrzr-ct.html)
 
+
+Return, inside or outside Try / catch?
+----------
+
+```
+
+function getFilenames(){
+    $response = false;
+
+    try{
+        //your code
+        $response = $filenames;
+    }catch{
+
+    }
+
+    return $response;
+}
+
+or 
+
+catch(Exception $e) {
+    $this->error = 'Error al intentar conectar con la BD: ' . $e->getMessage();
+    return null;
+}
+
+```
+
+[Return, inside or outside Try / catch?](https://stackoverflow.com/questions/18963053/return-inside-or-outside-try-catch)
+
+
