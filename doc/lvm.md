@@ -135,6 +135,18 @@ tmpfs                              350M     0  350M   0% /run/user/1000
 [Use LVM To Manage Storage Devices on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-use-lvm-to-manage-storage-devices-on-ubuntu-18-04#displaying-information-about-physical-volumes,-volume-groups,-and-logical-volumes)
 
 
+Slow boot with SSD and LVM on new install of 18.04
+----------
+
+```
+lsblk -f
+sudo systemd-analyze blame
+
+```
+
+[Slow boot with SSD and LVM on new install of 18.04](https://askubuntu.com/questions/1037457/slow-boot-with-ssd-and-lvm-on-new-install-of-18-04)
+
+
 LVM Commands
 ----------
 ```

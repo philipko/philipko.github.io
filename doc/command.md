@@ -128,3 +128,8 @@ Generating a new SSH key
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 [Connecting to GitHub with SSH](https://help.github.com/en/articles/connecting-to-github-with-ssh)
+
+
+system 
+----------
+sudo systemd-analyze blame
