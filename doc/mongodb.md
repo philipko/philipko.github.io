@@ -310,4 +310,40 @@ $bulk->delete(['user_id' => 2], ['limit' => 0]);   // limit 為 0 時，刪除�
 [php7的mongodb基本用法](https://www.itread01.com/content/1545617347.html)
 
 
+如何在PHP和MongoDB中正确捕捉异常
+----------
+
+```
+<?php 
+
+try { 
+
+    $mng = new MongoDB\Driver\Manager("mongodb://localhost:2717"); 
+    $query = new MongoDB\Driver\Query([], ['sort' => [ 'name' => 1], 'limit' => 5]);  
+
+    $rows = $mng->executeQuery("testdb.cars", $query); 
+
+    foreach ($rows as $row) { 
+
+     echo "$row->name : $row->price\n"; 
+    } 
+
+} catch (MongoDB\Driver\Exception\Exception $e) { 
+
+    $filename = basename(__FILE__); 
+
+    echo "The $filename script has experienced an error.\n"; 
+    echo "It failed with the following exception:\n"; 
+
+    echo "Exception:", $e->getMessage(), "\n"; 
+    echo "In file:", $e->getFile(), "\n"; 
+    echo "On line:", $e->getLine(), "\n";  
+} 
+
+?> 
+
+```
+
+[如何在PHP和MongoDB中正确捕捉异常](http://cn.voidcc.com/question/p-nmwglrzr-ct.html)
+
 
