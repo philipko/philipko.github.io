@@ -12,6 +12,9 @@ git log --all --decorate --oneline --graph
 [Pretty git branch graphs](https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs)
 
 
+
+
+
 Please, oh please, use git pull --rebase
 ----------
 
@@ -29,6 +32,8 @@ commands
 ```
 
 git cherry-pick 6a498ec --no-commit
+git reset HEAD -- <file>   //remove a single file from the staging area
+git reset HEAD -- <directoryName> //remove a whole directory (folder) from the staging area
 
 ```
 
