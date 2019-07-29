@@ -11,6 +11,7 @@
 * [LVM](doc/lvm.md)
 * [Mariadb](doc/mariadb.md)
 * [MongoDB](doc/mongodb.md)
+* [Node](doc/node.md)
 * [PHP](doc/php.md)
 * [Proxmox VE](doc/proxmoxve.md)
 * [RancherOS](doc/rancheros.md)
