@@ -2,6 +2,9 @@
 #
 # https://github.com/dockerfile/ubuntu
 #
+# commands
+# docker build -t philip/ubuntu:18.04 .
+# docker run -it -d --rm --name philip_ubunut_18.04 philip/ubuntu:18.04
 
 # Pull base image.
 FROM ubuntu:18.04
@@ -10,7 +13,7 @@ FROM ubuntu:18.04
 RUN \
   sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
   apt-get update && \
-  apt-get install -y build-essential curl git htop man unzip vim wget && \
+  apt-get install -y net-tools iputils-ping build-essential curl git htop man unzip vim wget && \
   rm -rf /var/lib/apt/lists/*
 
 # Add files.
