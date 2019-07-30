@@ -3,8 +3,8 @@
 # https://github.com/dockerfile/ubuntu
 #
 # commands
-# docker build -f Dockerfile_Ubuntu_18.04_adminator . -t philip/adminator
-# docker run -it -d --rm --name philip_ubunut_18.04_adminator philip/adminator
+# docker build -f Dockerfile_Ubuntu_18.04_Nodejs . -t philip/nodejs
+# docker run -it -d --rm --name philip_nodejs philip/nodejs
 
 # Pull base image.
 FROM philip/ubuntu:18.04
