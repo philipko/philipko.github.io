@@ -11,3 +11,6 @@ nodejs_build:
 	docker build -f Dockerfile_Ubuntu_18.04_Nodejs . -t philip/nodejs
 nodejs_run:
 	docker run -it -d --name philip_nodejs philip/nodejs
+nodejs_adminator_run:
+	docker run -it -d -p3000:3000 --name philip_nodejs_adminator philip/nodejs_adminator:1.0.0
+
