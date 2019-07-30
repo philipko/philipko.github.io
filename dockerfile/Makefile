@@ -14,5 +14,5 @@ nodejs_run:
 nodejs_adminator_run:
 	docker run -it -d -p3000:3000 --name philip_nodejs_adminator philip/nodejs_adminator:1.0.0
 nodejs_adminlte_run:
-	docker run -it -d -p4000:80 --name philip_nodejs_adminlte philip/nodejs_adminlte
+	docker run -it -d -v $(shell pwd):/home/AdminLTE -p4000:80 --name philip_nodejs_adminlte philip/nodejs_adminlte
 
