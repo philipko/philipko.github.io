@@ -12,6 +12,7 @@ System Block
 
 [邏輯捲軸管理員](https://zh.wikipedia.org/wiki/%E9%82%8F%E8%BC%AF%E6%8D%B2%E8%BB%B8%E7%AE%A1%E7%90%86%E5%93%A1)
 [LVM2學習筆記](http://maxubuntu.blogspot.com/2010/05/lvm2.html)
+[詳解LVM基礎概念、原理、關係、優缺點和使用lvm基本步驟](https://kknews.cc/zh-hk/news/k6l5vbq.html)
 
 Create PV,VG,LV
 ----------
