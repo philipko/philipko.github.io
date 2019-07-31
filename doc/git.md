@@ -88,4 +88,6 @@ The same git push all --all works here as well.
 
 [Able to push to all git remotes with the one command](https://stackoverflow.com/questions/5785549/able-to-push-to-all-git-remotes-with-the-one-command)
 
-
+好用連結
+----------
+[Git 初學筆記 - 指令操作教學](https://blog.longwin.com.tw/2009/05/git-learn-initial-command-2009/)
