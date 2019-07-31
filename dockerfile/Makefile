@@ -3,6 +3,7 @@ all: build
 help:
 	@echo "-- Help Menu"
 	@echo "docker run --name mdwiki-nginx -p8000:80 --rm -d -v $(shell pwd):/usr/share/nginx/html nginx:latest"
+	@echo "docker run --name mdwiki-nginx -p8000:80 --restart=always --network ogacloud_default --rm -d -v $(shell pwd):/usr/share/nginx/html nginx:latest"
 ubuntu_1804_build:
 	docker build -f Dockerfile_Ubuntu_18.04 . -t philip/ubuntu:18.04
 ubuntu_1804_run:
