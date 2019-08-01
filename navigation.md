@@ -13,6 +13,7 @@
 * [Node](doc/node.md)
 * [PHP](doc/php.md)
 * [Proxmox VE](doc/proxmoxve.md)
+* [Python](doc/python.md)
 * [RancherOS](doc/rancheros.md)
 * [SQL](doc/sql.md)
 * [Tensorflow](doc/tensorflow.md)
