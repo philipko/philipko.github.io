@@ -16,4 +16,9 @@ nodejs_adminator_run:
 	docker run -it -d -p3000:3000 --name philip_nodejs_adminator philip/nodejs_adminator:1.0.0
 nodejs_adminlte_run:
 	docker run -it -d -v $(shell pwd):/home/AdminLTE -p4000:80 --name philip_nodejs_adminlte philip/nodejs_adminlte
+ubuntu_1604_tensorflow_cpu_build:
+	docker build -f Dockerfile_Ubuntu_16.04_Tensorflow_CPU . -t philip/tensorflow
+ubuntu_1604_tensorflow_gpu_build:
+	docker build -f Dockerfile_Ubuntu_16.04_Tensorflow_GPU . -t philip/tensorflow
+
 
