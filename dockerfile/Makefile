@@ -19,7 +19,8 @@ nodejs_adminlte_run:
 ubuntu_1604_tensorflow_cpu_build:
 	docker build -f Dockerfile_Ubuntu_16.04_Tensorflow_CPU . -t philip/tensorflow_cpu:1.6
 ubuntu_1604_tensorflow_cpu_run:
-	docker run -it -d  -p6006:6006 -p8888:8888 -p2222:22 --name philip_tensorflow_cpu philip/tensorflow_cpu:1.6
+	#docker run -it -d  -p6006:6006 -p8888:8888 -p2222:22 --name philip_tensorflow_cpu philip/tensorflow_cpu:1.6
+	docker run -it -d  -p6006:6006 -p8888:8888 --name philip_tensorflow_cpu philip/tensorflow_cpu:1.6
 ubuntu_1604_tensorflow_gpu_build:
 	docker build -f Dockerfile_Ubuntu_16.04_Tensorflow_GPU . -t philip/tensorflow_gpu
 
