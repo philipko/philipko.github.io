@@ -47,3 +47,4 @@ Untagged: my-image:0e5574283393
 
 ```
 
+[Docker 資源分配](https://roy051023.github.io/2019/03/25/Limit-Docker/)
