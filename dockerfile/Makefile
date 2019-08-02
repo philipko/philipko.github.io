@@ -16,6 +16,12 @@ nodejs_adminator_run:
 	docker run -it -d -p3000:3000 --name philip_nodejs_adminator philip/nodejs_adminator:1.0.0
 nodejs_adminlte_run:
 	docker run -it -d -v $(shell pwd):/home/AdminLTE -p4000:80 --name philip_nodejs_adminlte philip/nodejs_adminlte
+
+ubuntu_1804_tensorflow_cpu_build:
+	docker build -f Dockerfile_Ubuntu_18.04_Tensorflow_CPU . -t philip/ubuntu1804_tensorflow_cpu:1.10.1
+ubuntu_1804_tensorflow_cpu_run:
+	docker run -it -d  -p6006:6006 -p8888:8888 --name philip_ubuntu1804_tensorflow_cpu philip/ubuntu1804_tensorflow_cpu:1.10.1
+
 ubuntu_1604_tensorflow_cpu_build:
 	docker build -f Dockerfile_Ubuntu_16.04_Tensorflow_CPU . -t philip/tensorflow_cpu:1.6
 ubuntu_1604_tensorflow_cpu_run:

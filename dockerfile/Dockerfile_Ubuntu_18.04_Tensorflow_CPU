@@ -1,0 +1,25 @@
+FROM ubuntu:18.04
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates \
+	libglib2.0-0 libxext6 libsm6 libxrender1 \
+	git mercurial subversion \
+        python3 python3-pip \
+	curl vim net-tools ssh
+
+#RUN curl -O https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh && \
+#	/bin/bash Anaconda3-5.1.0-Linux-x86_64.sh -b && \
+#	rm Anaconda3-5.1.0-Linux-x86_64.sh
+#ENV PATH=$PATH:/root/anaconda3/bin/
+RUN pip3 install --upgrade pip && \
+	pip install --upgrade \
+	https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.10.1-cp36-cp36m-linux_x86_64.whl
+# TensorBoard
+EXPOSE 6006
+# IPython
+EXPOSE 8888
+# SSH 
+EXPOSE 22
+RUN echo 'root:toor' |chpasswd
+RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
+CMD ["sh","-c" ,"/etc/init.d/ssh start; bash"]
