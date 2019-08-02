@@ -24,7 +24,12 @@ Python example
 python3 -c 'import tensorflow as tf; print(tf.__version__)'
 python3 -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"
 
+pip install --upgrade tensorflow-gpu==1.2.1
+conda install tensorflow-gpu==1.2.1
+
 ```
+[regarding the url link to download specific tensorflow version](https://stackoverflow.com/questions/50307016/regarding-the-url-link-to-download-specific-tensorflow-version)
+
 
 goface 
 ----------
