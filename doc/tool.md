@@ -125,3 +125,8 @@ WEB tools
 
   * [Adminator is a easy to use and well design admin dashboard template for web apps, websites, services](https://github.com/puikinsh/Adminator-admin-dashboard)
   * [Web based File Manager in single PHP file](https://tinyfilemanager.github.io/docs/)
+
+Video tools
+----------
+
+  * [OpenShot 視訊編輯器](https://www.openshot.org/zh-hant/)
