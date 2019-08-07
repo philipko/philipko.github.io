@@ -125,8 +125,10 @@ WEB tools
 
   * [Adminator is a easy to use and well design admin dashboard template for web apps, websites, services](https://github.com/puikinsh/Adminator-admin-dashboard)
   * [Web based File Manager in single PHP file](https://tinyfilemanager.github.io/docs/)
+  * [Insomnia 是近期出現的一個HTTP Client，它具備好看的圖形化介面、跨平台的特性](https://insomnia.rest/)
 
 Video tools
 ----------
 
   * [OpenShot 視訊編輯器](https://www.openshot.org/zh-hant/)
+  * [Shotcut is a free, open source, cross-platform video editor](https://www.shotcut.org/)
