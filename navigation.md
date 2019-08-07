@@ -2,6 +2,7 @@
 [gimmick:theme](bootstrap)
 [Document]()
 
+* [AI](doc/ai.md)
 * [Command](doc/command.md)
 * [Docker](doc/docker.md)
 * [Git](doc/git.md)
