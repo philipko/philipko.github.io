@@ -8,6 +8,7 @@ Dlib
 [Dlib 好用的的Machine learning工具](https://chtseng.wordpress.com/2016/12/23/dlib-%E5%A5%BD%E7%94%A8%E7%9A%84%E7%9A%84machine-learning%E5%B7%A5%E5%85%B7-%E4%B8%80/)
 [Dlib for Android](https://github.com/tzutalin/dlib-android)
 [如何用OpenCV、Python和深度學習實現面部識別](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/500189/)
+[Python 使用 face_recognition 人臉識別](https://www.itread01.com/content/1547267413.html)
 
 
 A Simple Introduction to Facial Recognition (with Python codes)
