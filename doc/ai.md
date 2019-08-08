@@ -64,3 +64,12 @@ warren_buffett.jpg
 
 
 [A Simple Introduction to Facial Recognition (with Python codes)](https://www.analyticsvidhya.com/blog/2018/08/a-simple-introduction-to-facial-recognition-with-python-codes/)
+
+
+
+
+Detect face then autocrop pictures
+----------
+
+
+[Detect face then autocrop pictures](https://stackoverflow.com/questions/13211745/detect-face-then-autocrop-pictures)
