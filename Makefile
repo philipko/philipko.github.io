@@ -12,4 +12,4 @@ ngnix_pull:
 ngnix_run:
 	docker run --name mdwiki-nginx -p8000:80 --rm -d -v $(shell pwd):/usr/share/nginx/html nginx:latest
 philipko.github.io_run:
-	docker run --name philipko.github.io -p8000:80 --rm -d -v $(shell pwd):/usr/share/nginx/html nginx:latest
+	docker run --name philipko.github.io --restart=always -p8000:80 --rm -d -v $(shell pwd):/usr/share/nginx/html nginx:latest
