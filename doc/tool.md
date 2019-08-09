@@ -1,7 +1,18 @@
 Tool Note
 =======
 
+universal-ctags
+----------
 
+```
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:hnakamur/universal-ctags
+sudo apt update
+sudo apt install universal-ctags
+```
+
+[Ubuntu16.04安裝配置和使用ctags](https://www.itread01.com/content/1532971656.html)
+[universal-ctagsのUbuntu 18.04 LTS用debパッケージをビルドした](https://hnakamur.github.io/blog/2018/06/08/build-universal-ctags-deb-for-ubuntu-18.04-lts/)
 
 vimrc
 ----------
