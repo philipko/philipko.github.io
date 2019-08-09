@@ -22,7 +22,28 @@ conda create -n envName
 [Anaconda環境安裝](https://ithelp.ithome.com.tw/articles/10192460)
 [用conda建立及管理python虛擬環境](https://medium.com/python4u/%E7%94%A8conda%E5%BB%BA%E7%AB%8B%E5%8F%8A%E7%AE%A1%E7%90%86python%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83-b61fd2a76566)
 
+Python Virtual Environment
+----------
 
+```
+sudo apt-get install python3-venv python3-dev libxml2-dev libxslt1-dev zlib1g-dev libffi-dev libssl-dev
+
+#建置自己的虛擬環境、名稱
+pyvenv myenv # 建置虛擬環境名叫 myenv
+or python3.6 -m venv /home/user/myenv
+
+#進入自己建置的虛擬開發環境
+source myenv/bin/activate # 進入此環境
+(myenv) $ # 於此就進入此環境了
+
+#於虛擬開發環境安裝套件
+pip install Scrapy # 若有需要安裝套件，可在此環境安裝
+#退出虛擬開發環境
+deactivate
+
+```
+[Python3 虛擬環境 venv 建置步驟](https://blog.longwin.com.tw/2016/08/python-virtualenv-venv-build-2016/)
+[How to Setup Python Virtual Environment on Ubuntu 18.04](https://linoxide.com/linux-how-to/setup-python-virtual-environment-ubuntu/)
 
 dict[x]後串接list()
 ----------
