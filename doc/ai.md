@@ -1,6 +1,13 @@
 AI Note
 =======
 
+基礎
+----------
+
+[计算机视觉四大基本任务(分类、定位、检测、分割)](https://zhuanlan.zhihu.com/p/31727402)
+[深度学习在计算机视觉领域（包括图像，视频，3-D点云，深度图）的应用一览](https://zhuanlan.zhihu.com/p/55747295)
+[CH.Tseng分類：心得-影像分析](https://chtseng.wordpress.com/category/%E5%BF%83%E5%BE%97-%E5%BD%B1%E5%83%8F%E5%88%86%E6%9E%90/)
+[使用cnn來偵測臉部](https://chtseng.wordpress.com/2018/11/04/%E4%BD%BF%E7%94%A8cnn%E4%BE%86%E5%81%B5%E6%B8%AC%E8%87%89%E9%83%A8/)
 
 Dlib 
 ----------
