@@ -10,7 +10,7 @@ Dlib
 [如何用OpenCV、Python和深度學習實現面部識別](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/500189/)
 [Python 使用 face_recognition 人臉識別](https://www.itread01.com/content/1547267413.html)
 [自動化產生臉部五官 VOC Dataset](https://chtseng.wordpress.com/2018/12/03/%E8%87%AA%E5%8B%95%E5%8C%96%E7%94%A2%E7%94%9F%E8%87%89%E9%83%A8%E4%BA%94%E5%AE%98-voc-dataset/)
-
+[Android 中使用 dlib+opencv 实现动态人脸检测](https://www.cnblogs.com/lightweh/p/9815853.html)
 
 A Simple Introduction to Facial Recognition (with Python codes)
 ----------
