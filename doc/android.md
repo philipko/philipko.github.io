@@ -1,6 +1,7 @@
 Android Note
 =======
 
+
 Good example
 ----------
 ![](https://miro.medium.com/max/270/1*GAYx17bxmMVODkpveipEmA.gif)
