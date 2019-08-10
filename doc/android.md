@@ -4,11 +4,15 @@ Android Note
 
 Good example
 ----------
+
 ![](https://miro.medium.com/max/270/1*GAYx17bxmMVODkpveipEmA.gif)
 
 [googleplusdemo like linkdln GUI](https://github.com/TonyTangAndroid/GooglePlusDemo)
 [Integrate CoordinatorLayout + BottomNavigationView + Toolbar + TabLayout + ViewPager + Fragment + DrawerLayout](https://medium.com/@tonythompsoncmu/integrate-coordinatorlayout-bottomnavigationview-toolbar-tablayout-viewpager-fragment-e4268e83b475)
 
+![](https://camo.githubusercontent.com/04574b760fa41cc2fb92321c0fd9480e7eb580b5/68747470733a2f2f696d6775722e636f6d2f4d4e34737a4f362e706e67)
+
+[Bottom Navigation Views](https://github.com/codepath/android_guides/wiki/Bottom-Navigation-Views)
 
 Android open project
 ----------
