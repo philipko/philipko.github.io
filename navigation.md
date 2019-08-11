@@ -17,6 +17,7 @@
 * [Proxmox VE](doc/proxmoxve.md)
 * [Python](doc/python.md)
 * [RancherOS](doc/rancheros.md)
+* [Rust](doc/rust.md)
 * [SQL](doc/sql.md)
 * [Tensorflow](doc/tensorflow.md)
 * [Tool](doc/tool.md)
