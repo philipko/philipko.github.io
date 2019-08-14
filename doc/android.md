@@ -29,4 +29,8 @@ Bottom Navigation
 [Android Bottom Navigation Activity With RecyclerView Data Populated By Retrofit2 and Load images by Glide](http://androidboss.info/2017/05/25/android-bottom-navigation-activity-with-recyclerview-data-populated-by-retrofit2-and-load-images-by-glide/)
 
 
+NestedScrollView and Recyclerview 
+----------
+
 [How to use RecyclerView inside NestedScrollView](https://stackoverflow.com/questions/31000081/how-to-use-recyclerview-inside-nestedscrollview)
+[NestedScrollView+RecyclerView优雅的解决滑动冲突问题](https://www.jianshu.com/p/791c0a4acc1c)
