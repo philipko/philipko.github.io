@@ -143,3 +143,10 @@ Video tools
 
   * [OpenShot 視訊編輯器](https://www.openshot.org/zh-hant/)
   * [Shotcut is a free, open source, cross-platform video editor](https://www.shotcut.org/)
+
+Remote to linux desktop tools
+----------
+  * [Ubuntu 安裝可讓 Windows 遠端桌面登入的 xrdp](https://www.ichiayi.com/wiki/tech/ubuntu_xrdp)
+  * [Windows 遠端桌面連線到 Ubuntu 16.04](http://honglung.pixnet.net/blog/post/167257893-windows-%E9%81%A0%E7%AB%AF%E6%A1%8C%E9%9D%A2%E9%80%A3%E7%B7%9A%E5%88%B0-ubuntu-16.04)
+  * [How to setup an xRDP server on Ubuntu 18.04](https://medium.com/@vivekteega/how-to-setup-an-xrdp-server-on-ubuntu-18-04-89f7e205bd4e)
+  * [Remmina is a remote desktop client written in GTK+, aiming to be useful for system administrators and travellers](https://remmina.org/)
