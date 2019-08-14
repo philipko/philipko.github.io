@@ -36,11 +36,15 @@ NestedScrollView and Recyclerview
 [How to use RecyclerView inside NestedScrollView](https://stackoverflow.com/questions/31000081/how-to-use-recyclerview-inside-nestedscrollview)
 [NestedScrollView+RecyclerView优雅的解决滑动冲突问题](https://www.jianshu.com/p/791c0a4acc1c)
 
+[NestedScrollView + SwipeRefreshLayout + RecyclerView](https://gist.github.com/kamikat/2ba5f741f807d56a8dd7cf936571e69e)
+
+
 
 Recyclerview Library
 ----------
 
 [MultiType multiple types of RecyclerViews](https://github.com/drakeet/MultiType)
+
 
 
 Android Studio Template
