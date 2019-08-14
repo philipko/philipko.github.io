@@ -32,6 +32,7 @@ Bottom Navigation
 NestedScrollView and Recyclerview 
 ----------
 
+[NestedScrollView代替了ScrollView，他们两个都可以用来跟ToolBar交互，实现上拉下滑中ToolBar的变化](https://blog.csdn.net/wolfking0608/article/details/78758956)
 [How to use RecyclerView inside NestedScrollView](https://stackoverflow.com/questions/31000081/how-to-use-recyclerview-inside-nestedscrollview)
 [NestedScrollView+RecyclerView优雅的解决滑动冲突问题](https://www.jianshu.com/p/791c0a4acc1c)
 
