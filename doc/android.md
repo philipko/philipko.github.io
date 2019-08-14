@@ -40,3 +40,10 @@ Recyclerview Library
 ----------
 
 [MultiType multiple types of RecyclerViews](https://github.com/drakeet/MultiType)
+
+
+Android Studio Template
+----------
+
+[RecyclerViewTemplate](https://github.com/TakeoffAndroid/RecyclerViewTemplate?source=post_page-----a8b6d4925f3f----------------------)
+
