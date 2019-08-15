@@ -133,3 +133,30 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 system 
 ----------
 sudo systemd-analyze blame
+
+How to know update package after system reboot 
+----------
+
+Should I always restart the system when I see “System restart required”
+
+```
+more /var/run/reboot-required.pkgs
+
+```
+[Should I always restart the system when I see “System restart required”](https://askubuntu.com/questions/258297/should-i-always-restart-the-system-when-i-see-system-restart-required)
+
+How to disable system update
+----------
+
+disable updates from command line in Ubuntu 16.04
+
+Edit /etc/apt/apt.conf.d/20auto-upgrades to disable automatic updates from the command line
+Once you have the file opened, switch off the Update-Package-Lists directive from 1 to 0 as shown below:
+
+```
+APT::Periodic::Update-Package-Lists "0";
+APT::Periodic::Unattended-Upgrade "1";
+
+```
+
+[disable updates from command line in Ubuntu 16.04](https://askubuntu.com/questions/1059971/disable-updates-from-command-line-in-ubuntu-16-04)
