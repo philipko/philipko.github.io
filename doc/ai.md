@@ -83,3 +83,12 @@ Detect face then autocrop pictures
 
 
 [Detect face then autocrop pictures](https://stackoverflow.com/questions/13211745/detect-face-then-autocrop-pictures)
+
+
+Detect face with Delaunay Triangulation & Voronoi Diagrams
+----------
+
+![](https://chtseng.files.wordpress.com/2019/08/6700_rdk9bn1du3.png)
+
+[Delaunay Triangulation & Voronoi Diagrams](https://chtseng.wordpress.com/2019/08/07/delaunay-triangulation-voronoi-diagrams/)
+
