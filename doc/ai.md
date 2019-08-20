@@ -92,3 +92,7 @@ Detect face with Delaunay Triangulation & Voronoi Diagrams
 
 [Delaunay Triangulation & Voronoi Diagrams](https://chtseng.wordpress.com/2019/08/07/delaunay-triangulation-voronoi-diagrams/)
 
+臉部識別打卡鐘-樹莓單機版
+----------
+
+[臉部識別打卡鐘-樹莓單機版](https://chtseng.wordpress.com/2019/01/11/%e8%87%89%e9%83%a8%e8%ad%98%e5%88%a5%e6%89%93%e5%8d%a1%e9%90%98-%e6%a8%b9%e8%8e%93%e5%96%ae%e6%a9%9f%e7%89%88)
