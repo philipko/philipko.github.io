@@ -11,6 +11,11 @@ AI Note
 [AI 從頭學（2020 年版）](https://hemingwang.blogspot.com/2019/08/ai-2020.html?m=1)
 
 
+SeetaFace2
+----------
+
+[SeetaFace2 采用标准 C++ 开发](https://github.com/seetafaceengine/SeetaFace2)
+
 Dlib 
 ----------
 
@@ -74,6 +79,7 @@ warren_buffett.jpg
 
 
 [A Simple Introduction to Facial Recognition (with Python codes)](https://www.analyticsvidhya.com/blog/2018/08/a-simple-introduction-to-facial-recognition-with-python-codes/)
+
 
 
 
