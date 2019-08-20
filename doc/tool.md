@@ -126,6 +126,10 @@ Cacti
 
   * [MRTG再進化──多功能的Cacti](http://www.rl-tech.com.tw/zh-tw/article_info.php?id=44)
 
+Minio
+----------
+  * [Minio 是一個基于 golang 語言開發的 AWS S3 存儲協議的開源實現，可以通過 Minio 搭建私人的兼容 AWS S3 協議的存儲服務器](https://www.itread01.com/articles/1474594578.html)
+
 
 LibreNMS
 ----------
