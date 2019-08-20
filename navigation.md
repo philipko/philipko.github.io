@@ -21,6 +21,7 @@
 * [SQL](doc/sql.md)
 * [Tensorflow](doc/tensorflow.md)
 * [Tool](doc/tool.md)
+* [Vim](doc/vim.md)
 
 [Download](download.md)
 [About](abort.md)
