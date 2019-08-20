@@ -1,6 +1,31 @@
 Command Note
 =======
 
+
+
+find 
+----------
+
+```
+find
+-mtime 搜尋檔案的修改時間(天)
+-mmin 搜尋檔案的修改時間(分鐘)
+-ctime 搜尋檔案的建立時間(天)
+-cmin 搜尋檔案的建立時間(分鐘)
+-atime 搜尋檔案的最後開啟時間(天)
+-amin 搜尋檔案的最後開啟時間(分鐘)
+
+ex:
+
+find ./ -mtime 3 # 在當前目錄下搜尋3天時修改的檔案
+find ./ -mtime +3 # 在當前目錄下搜尋3天前修改的檔案
+find ./ -mtime -3 # 在當前目錄下搜尋3天內修改的檔案
+
+```
+
+[Linux 使用 find 找出限定修改時間內的檔案](https://blog.longwin.com.tw/2017/08/linux-find-limit-date-time-file-2017/)
+
+
 ubuntu 14.04防火牆
 ----------
 
