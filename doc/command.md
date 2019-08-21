@@ -2,6 +2,35 @@ Command Note
 =======
 
 
+curl 
+----------
+
+```
+curl 
+-X/--request [GET|POST|PUT|DELETE|PATCH]  使用指定的 http method 來發出 http request
+-H/--header                           設定 request 裡所攜帶的 header
+-i/--include                          在 output 顯示 response 的 header
+-d/--data                             攜帶 HTTP POST Data 
+-v/--verbose                          輸出更多的訊息方便 debug
+-u/--user                             攜帶使用者帳號、密碼
+-b/--cookie                           攜帶 cookie（可以是參數或是檔案位置）
+
+#use post upload file (obama2.jpg)
+curl -XPOST -F "file=@obama2.jpg" http://127.0.0.1:5001
+
+
+curl -X PUT -H "Content-Type: application/json" -d '{"status" : false }' "http://www.example.com/api/resources"
+
+#POST JSON 資料
+curl -X POST -H "Content-Type: application/json" -d '{"status" : false, "name" : "Jack"}' "http://www.example.com/api/resources"
+
+
+#cookie
+curl --cookie "name=Jack" http://www.example.com
+
+```
+
+[Linux Curl Command 指令與基本操作入門教學](https://blog.techbridge.cc/2019/02/01/linux-curl-command-tutorial/)
 
 find 
 ----------
