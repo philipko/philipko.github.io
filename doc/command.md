@@ -1,6 +1,27 @@
 Command Note
 =======
 
+crontab
+----------
+
+
+```
+在ubuntu下安装crontab后，系统默认的是不开启crontab的日志记录，如何开始crontab的日志
+修改rsyslog文件，将/etc/rsyslog.d/50-default.conf 文件中的#cron.*前的#删掉
+重启rsyslog服务service rsyslog restart；
+重启cron服务service cron restart；
+
+如果在日志文件中出现：No MTA installed, discarding output
+那么就是说，crontab执行脚本时是不会直接错误的信息输出，而是会以邮件的形式发送到你的邮箱里
+
+在每条定时脚本后面加入:
+>/dev/null 2>&1
+
+
+```
+
+[UBUNTU开启CRONTAB日志记录及解决NO MTA INSTALLED, DISCARDING OUTPUT问题](https://blog.csdn.net/disappearedgod/article/details/43191693)
+
 
 curl 
 ----------
