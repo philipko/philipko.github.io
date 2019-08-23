@@ -134,3 +134,57 @@ print(os.path.basename(path_str))
 ```
 
 [Extract file name from path, no matter what the os/path format](https://stackoverflow.com/questions/8384737/extract-file-name-from-path-no-matter-what-the-os-path-format)
+
+
+
+python date & time string
+----------
+
+```
+from datetime import datetime
+
+now = datetime.now()
+now_str = now.strftime("%Y%m%d%H%M%S")
+```
+
+
+Handle urllib's timeout and other errors  in Python 3
+----------
+
+```
+import urllib.request as request
+try:
+    response = request.urlopen('http://google.com',timeout = 0.001)
+    print(response)
+except request.URLError as err:
+    print('got here')
+    # urllib.URLError: <urlopen error timed out>
+
+
+
+import urllib.request
+import urllib.error
+
+url = ['http://www.pcbeta.com/a.html',
+       'http://b.con']
+try:
+    a = urllib.request.urlopen(url[0])
+except urllib.error.HTTPError as e:  # 此时是HTTPError
+    print(e.code)
+except urllib.error.URLError as e:  # 此时是URLError
+    print(e.reason)
+
+
+```
+
+[How to handle urllib's timeout in Python 3](https://stackoverflow.com/questions/8763451/how-to-handle-urllibs-timeout-in-python-3)
+
+Linux 如何於 Crontab 執行 Python Virtualenv 環境
+----------
+
+```
+SHELL=/bin/bash
+/10 * * * * source /project/venv/bin/activate && /project/bin/exec.py args
+```
+[Linux 如何於 Crontab 執行 Python Virtualenv 環境](https://blog.longwin.com.tw/2019/03/linux-crontab-python-virtualenv-env-2019/)
+[Cron and virtualenv](https://stackoverflow.com/questions/3287038/cron-and-virtualenv)
