@@ -22,7 +22,12 @@ delete between parentheses in vi/vim
 
 d%
 
+
+With your cursor on the first opening bracket ([), press V, followed by %. This will select the block which you then can join J, followed by di[.
+
+
 ```
 
 
+[Delete everything between two brackets in Vim, including newlines](https://stackoverflow.com/questions/40209074/delete-everything-between-two-brackets-in-vim-including-newlines/40209145)
 [Can you grab or delete between parentheses in vi/vim?](https://stackoverflow.com/questions/405415/can-you-grab-or-delete-between-parentheses-in-vi-vim)
