@@ -179,6 +179,28 @@ except urllib.error.URLError as e:  # 此时是URLError
 
 [How to handle urllib's timeout in Python 3](https://stackoverflow.com/questions/8763451/how-to-handle-urllibs-timeout-in-python-3)
 
+Handling API errors using Python requests
+----------
+
+```
+try:
+  response = requests.post(_url, files={'file': some_file})
+  response.raise_for_status()
+except requests.exceptions.HTTPError as errh:
+  return "An Http Error occurred:" + repr(errh)
+except requests.exceptions.ConnectionError as errc:
+  return "An Error Connecting to the API occurred:" + repr(errc)
+except requests.exceptions.Timeout as errt:
+  return "A Timeout Error occurred:" + repr(errt)
+except requests.exceptions.RequestException as err:
+  return "An Unknown Error occurred" + repr(err)
+
+```
+
+[Handling API errors using Python requests](https://www.secopshub.com/t/handling-api-errors-using-python-requests/589/1)
+
+
+
 Linux 如何於 Crontab 執行 Python Virtualenv 環境
 ----------
 
