@@ -93,6 +93,13 @@ rsync -avzh pi@192.168.1.12:/mypath/myfile.gz /mybackup/
 
 ```
 
+pass password automatically for rsync SSH command?
+
+```
+sudo apt-get install sshpass
+/usr/bin/rsync -ratlz --rsh="/usr/bin/sshpass -p password ssh -o StrictHostKeyChecking=no -l username" src_path  dest_path
+```
+
 自訂 SSH 連接埠
 
 ```
@@ -100,7 +107,12 @@ rsync -avzh pi@192.168.1.12:/mypath/myfile.gz /mybackup/
 rsync -avzh -e 'ssh -p 12345' /mypath/myfile.gz pi@192.168.1.12:/mybackup/
 ```
 
+
+
+
 [Linux 使用 rsync 遠端檔案同步與備份工具教學與範例](https://blog.gtwang.org/linux/rsync-local-remote-file-synchronization-commands/)
+[以 rsync 進行遠端同步備份](http://www.vixual.net/blog/archives/186)
+[How to pass password automatically for rsync SSH command?](https://stackoverflow.com/questions/3299951/how-to-pass-password-automatically-for-rsync-ssh-command)
 
 
 
