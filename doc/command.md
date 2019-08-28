@@ -76,6 +76,36 @@ find ./ -mtime -3 # 在當前目錄下搜尋3天內修改的檔案
 [Linux 使用 find 找出限定修改時間內的檔案](https://blog.longwin.com.tw/2017/08/linux-find-limit-date-time-file-2017/)
 
 
+rsync
+----------
+
+
+
+
+rsync 遠端備份
+
+```
+本地端的 myfile.gz 備份至 pi@192.168.1.12 的 /mybackup/ 目錄中
+rsync -avzh /mypath/myfile.gz pi@192.168.1.12:/mybackup/
+
+rsync 也可以將遠端的檔案備份至本地端
+rsync -avzh pi@192.168.1.12:/mypath/myfile.gz /mybackup/
+
+```
+
+自訂 SSH 連接埠
+
+```
+假設 192.168.1.12 這台伺服器的 ssh 服務連接埠號碼為 12345，以下是透過 rsync 將資料備份資料的範例
+rsync -avzh -e 'ssh -p 12345' /mypath/myfile.gz pi@192.168.1.12:/mybackup/
+```
+
+[Linux 使用 rsync 遠端檔案同步與備份工具教學與範例](https://blog.gtwang.org/linux/rsync-local-remote-file-synchronization-commands/)
+
+
+
+
+
 ubuntu 14.04防火牆
 ----------
 
@@ -235,3 +265,46 @@ APT::Periodic::Unattended-Upgrade "1";
 ```
 
 [disable updates from command line in Ubuntu 16.04](https://askubuntu.com/questions/1059971/disable-updates-from-command-line-in-ubuntu-16-04)
+
+
+find remove obsolete ppa repositories ubuntu.
+----------
+
+
+```
+
+sudo apt-get update | grep "Failed"
+sudo add-apt-repository --remove ppa:finalterm/daily 
+
+
+sudo add-apt-repository -r ppa:beineri/opt-qt57-xenial
+sudo add-apt-repository -r ppa:beineri/opt-qt57-trusty
+
+```
+
+[How to find and remove obsolete PPA repositories on Ubuntu](http://ask.xmodulo.com/find-remove-obsolete-ppa-repositories-ubuntu.html)
+[How can I fix a 403 Forbidden Error when using a PPA or updating my package lists? [duplicate]](http://askubuntu.com/questions/1018341/how-can-i-fix-a-403-forbidden-error-when-using-a-ppa-or-updating-my-package-lis)
+
+
+
+How to apt-delete-repository? [duplicate]
+----------
+
+```
+To remove a repository, you have to do 2 things:
+
+Remove it from sources.list.
+
+If it was added by add-apt-repository then you will find it in its own file in /etc/apt/sources.list.d, not in the main sources.list.
+
+sudo rm /etc/apt/sources.list.d/nemh-systemback-precise.list
+Optional: Stop trusting the key
+
+Use apt-key list to list trusted keys. Look for an entry like "Launchpad PPA for Kendek" in this case. Then use apt-key del to delete it:
+
+sudo apt-key del 73C62A1B
+```
+
+[How to apt-delete-repository](https://unix.stackexchange.com/questions/219341/how-to-apt-delete-repository)
+
+
