@@ -2,6 +2,45 @@ Android Note
 =======
 
 
+
+
+adb
+----------
+
+If you can’t figure out which one is the intended device, type below command to print device information.
+
+```
+adb devices -l
+```
+
+
+
+Type below command to restart the adb in tcpip mode for the device.
+
+```
+
+adb -s <device id> tcpip 5555
+
+```
+
+
+Other command list
+
+```
+adb tcpip 5555
+adb connect 192.168.xx.xx
+adb connect 192.X.X.X:5555 
+```
+
+adb over wifi
+
+```
+adb tcpip 5555
+adb connect 192.X.X.X:5555 
+```
+
+[adb 透過 Wi-Fi 連線裝置](http://blog.tonycube.com/2017/02/adb-wi-fi.html)
+
 Good example
 ----------
 
