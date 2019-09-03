@@ -323,3 +323,21 @@ sudo apt-key del 73C62A1B
 [How to apt-delete-repository](https://unix.stackexchange.com/questions/219341/how-to-apt-delete-repository)
 
 
+disable services on startup in ubuntu [duplicate]
+----------
+
+Use:
+
+```
+systemctl disable <service>
+```
+
+If you are not using systemd (Ubuntu 14.10 and earlier) use:
+
+```
+update-rc.d -f <service> remove
+```
+
+[disable services on startup in ubuntu](https://askubuntu.com/questions/698993/disable-services-on-startup-in-ubuntu)
+[Enabling and disabling services during start up in GNU/Linux](http://www.aboutlinux.info/2006/04/enabling-and-disabling-services-during_01.html)
+
