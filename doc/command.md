@@ -248,7 +248,7 @@ Bash Shell Script
 #!/bin/bash
 user=${gituser}
 password=${gituserpassword}
-if ["$user" ="" ]||["$password" ="" ]; then
+if [ -z "$user" ] || [ -z "$password" ]; then
     echo "user and password is error"
     echo "ex:"
     echo "export gituser=XXXXX"
