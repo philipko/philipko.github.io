@@ -13,6 +13,14 @@ git log --all --decorate --oneline --graph
 
 
 
+make Git use the editor of my choice for commits?
+----------
+
+```
+git config --global core.editor "vim"
+```
+
+[How do I make Git use the editor of my choice for commits?](https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-commits)
 
 
 Please, oh please, use git pull --rebase
