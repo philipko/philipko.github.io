@@ -240,6 +240,32 @@ lsof -i TCP -s TCP:ESTABLISHED
 
 [Linux 列出行程開啟的檔案，lsof 指令用法教學與範例](https://blog.gtwang.org/linux/linux-lsof-command-list-open-files-tutorial-examples/)
 
+Bash Shell Script
+----------
+
+```
+
+#!/bin/bash
+user=${gituser}
+password=${gituserpassword}
+if ["$user" ="" ]||["$password" ="" ]; then
+    echo "user and password is error"
+    echo "ex:"
+    echo "export gituser=XXXXX"
+    echo "export gituserpassword=XXXXX"
+    exit
+fi
+
+
+backup_date=`date +"%Y%m%d"`
+backup_date_tmp="backup_$backup_date.txt"
+backup_curl_command="$user:$password "
+echo $backup_curl_command
+eval $backup_curl_command
+exit
+
+```
+
 
 Generating a new SSH key
 ----------
