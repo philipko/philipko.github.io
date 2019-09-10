@@ -265,7 +265,7 @@ eval $backup_curl_command
 exit
 
 ```
-
+[How to check if an environment variable exists and get its value? [duplicate]](https://stackoverflow.com/questions/39296472/how-to-check-if-an-environment-variable-exists-and-get-its-value)
 
 Generating a new SSH key
 ----------
