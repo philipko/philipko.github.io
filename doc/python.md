@@ -210,3 +210,33 @@ SHELL=/bin/bash
 ```
 [Linux 如何於 Crontab 執行 Python Virtualenv 環境](https://blog.longwin.com.tw/2019/03/linux-crontab-python-virtualenv-env-2019/)
 [Cron and virtualenv](https://stackoverflow.com/questions/3287038/cron-and-virtualenv)
+
+
+python3 import issue
+----------
+
+其中 m1.m1 的部分，第一個 m1 指的是這個 package，你也可以想成就是指 m1 這個資料夾。第二個 m1 指的則是這個 package 中的 module 的 m1 檔案。最後一個 foo 則是我們要從檔案中 import 的 funcion, class 或變數。
+
+
+```
+import_example
+├── m1
+│   ├── __init__.py
+│   └── m1.py
+└── main.py
+
+
+#for m1.py
+def foo():
+    print('I am foo in m1')
+
+#for main.py
+
+from m1.m1 import foo
+if __name__ == '__main__':
+    foo()
+
+```
+[Python import 簡易教學](https://medium.com/@alan81920/python-import-%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8-c98e8e2553d3)
+[Python 的 Import 陷阱](https://medium.com/pyladies-taiwan/python-%E7%9A%84-import-%E9%99%B7%E9%98%B1-3538e74f57e3)
+[Better place to put common functions?](https://stackoverflow.com/questions/37127201/better-place-to-put-common-functions)
