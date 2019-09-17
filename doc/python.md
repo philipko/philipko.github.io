@@ -255,3 +255,27 @@ from my_module import *
 [importing multiple functions from a Python module](https://stackoverflow.com/questions/6761825/importing-multiple-functions-from-a-python-module)
 [import雜談之二———export機制以及namespace package](https://ithelp.ithome.com.tw/articles/10196775?sc=iThelpR)
 
+
+access environment variable values in python3
+----------
+
+```
+import os
+
+# using get will return `None` if a key is not present rather than raise a `KeyError`
+print(os.environ.get('KEY_THAT_MIGHT_EXIST'))
+
+# os.getenv is equivalent, and can also give a default value instead of `None`
+print(os.getenv('KEY_THAT_MIGHT_EXIST', default_value))
+
+print(os.environ['HOME'])
+
+try:  
+   os.environ["FOO"]
+except KeyError: 
+   print("Please set the environment variable FOO")
+   sys.exit(1)
+
+```
+
+[How to access environment variable values?](https://stackoverflow.com/questions/4906977/how-to-access-environment-variable-values)
