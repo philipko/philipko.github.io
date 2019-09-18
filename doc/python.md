@@ -279,3 +279,92 @@ except KeyError:
 ```
 
 [How to access environment variable values?](https://stackoverflow.com/questions/4906977/how-to-access-environment-variable-values)
+
+
+Python email MIME attachment filename
+----------
+
+```
+#!/usr/bin/python3
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+from email.utils import formatdate
+from email.header import Header
+from email import encoders
+
+import sys
+import os
+
+def main():
+    print("Test run started")
+    send_attach("xxxx@xxxx","Test Email","test content","xxxxxxxx.log")
+    print("Test run finished")
+
+def send_attach(receiver,Subject,Content,AttachDir):
+    smtpHost = '10.0.168.10'
+    # 发送邮件的相关信息，根据你实际情况填写
+    smtpHost = '10.0.168.10'
+    smtpPort = '25'
+    sslPort = '587'
+    fromMail = 'xxxx@xxxx'
+    toMail = receiver
+    username = 'xxxxxx'
+    password = 'xxxxxx'
+    msg = MIMEMultipart()
+    msg['Subject'] = Subject
+    msg['From'] = fromMail
+    msg['To'] =  toMail
+
+    #part = MIMEBase('application', "octet-stream")
+    #part.set_payload(open(AttachFile, "rb").read())
+    #encoders.encode_base64(part)
+    #part.add_header('Content-Disposition', 'attachment', filename=os.path.basename(AttachFile))
+    #msg.attach(part)
+
+    attachments = os.listdir(AttachDir)
+    for file in attachments:
+      AttachFile=AttachDir+file
+      print(AttachFile)
+      part = MIMEBase('application', "octet-stream")
+      part.set_payload(open(AttachFile, "rb").read())
+      encoders.encode_base64(part)
+      part.add_header('Content-Disposition', 'attachment', filename=os.path.basename(AttachFile))
+      msg.attach(part)
+    encoding = 'utf-8'
+    msg.attach(MIMEText(Content.encode(encoding), 'plain',encoding))
+    msg.attach(part)
+    try:
+        #连接smtp服务器，明文/SSL/TLS三种方式，根据你使用的SMTP支持情况选择一种
+        #普通方式，通信过程不加密
+        #smtp = smtplib.SMTP(smtpHost, smtpPort)
+        #smtp.ehlo()
+        #smtp.login(username, password)
+        # tls加密方式，通信过程加密，邮件数据安全，使用正常的smtp端口
+        smtp = smtplib.SMTP(smtpHost,smtpPort,timeout=10)
+        #smtp.set_debuglevel(True)
+        smtp.ehlo()
+        smtp.starttls()
+        smtp.ehlo()
+        smtp.login(username,password)
+        # 纯粹的ssl加密方式，通信过程加密，邮件数据安全
+        #smtp = smtplib.SMTP_SSL(smtpHost,sslPort,timeout=10)
+        #smtp.ehlo()
+        #smtp.login(username,password)
+        # 发送邮件
+        smtp.sendmail(fromMail, toMail, msg.as_string())
+        smtp.close()
+        print("{}(mail:{}) send mail to {}".format(hostname,smtpHost,receiver))
+    except Exception as e:
+        print(e)
+
+if __name__=="__main__":
+    main()
+
+```
+
+[Python email MIME attachment filename](https://stackoverflow.com/questions/29239572/python-email-mime-attachment-filename)
+[USE PYTHON 3 TO SEND EMAIL WITH ATTACHMENTS USING GMAIL](https://fusioncell.ai/python3-email-with-attachments-using-gmail/)
+[How to send email attachments with Python 3.6](https://stackoverflow.com/questions/44607943/how-to-send-email-attachments-with-python-3-6)
+
