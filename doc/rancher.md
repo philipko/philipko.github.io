@@ -1,8 +1,14 @@
 Rancher Note
 =======
 
+
+Case
+---------
+
+[通聯數據是如何使用Docker+Rancher構建自動發布管道的](https://www.itread01.com/content/1518322820.html)
+
 Install
-=======
+---------
 
 ```
 #for rancher 1.6
@@ -12,8 +18,8 @@ docker run -d --name rancher --restart=always -p 8080:8080 rancher/rancher:stabl
 
 ```
 
-LAUNCHING RANCHER SERVER - SINGLE CONTAINER - BIND MOUNT MYSQL VOLUME
-=======
+BIND MOUNT MYSQL VOLUME
+---------
 
 ```
 sudo docker run -d --name rancher -v <host_vol>:/var/lib/mysql --restart=unless-stopped -p 8080:8080 rancher/server:stable
