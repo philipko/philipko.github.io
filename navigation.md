@@ -16,6 +16,7 @@
 * [PHP](doc/php.md)
 * [Proxmox VE](doc/proxmoxve.md)
 * [Python](doc/python.md)
+* [Rancher](doc/rancher.md)
 * [RancherOS](doc/rancheros.md)
 * [Rust](doc/rust.md)
 * [SQL](doc/sql.md)
