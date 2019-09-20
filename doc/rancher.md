@@ -6,6 +6,7 @@ Case
 ---------
 
 [通聯數據是如何使用Docker+Rancher構建自動發布管道的](https://www.itread01.com/content/1518322820.html)
+[如何使用GitLab和Rancher構建CI/CD流水線](https://www.itread01.com/content/1549707859.html)
 
 Install
 ---------
