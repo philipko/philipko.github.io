@@ -29,6 +29,16 @@ docker search ubuntu
 
 ```
 
+Docker: remove all containers by grep command
+----------
+
+```
+
+docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs sudo docker rm
+docker ps -a | grep rancher | cut -d ' ' -f 1 | xargs sudo docker rm -f
+
+```
+
 Dockerfile Project 
 ----------
 
