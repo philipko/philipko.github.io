@@ -15,9 +15,12 @@ Install
 
 ```
 #for rancher 1.6
-docker run -d --name rancher --restart=always -p 8080:8080 rancher/server:stable
+docker run -d --name rancher1.x --restart=always -p 8080:8080 rancher/server:stable
+docker run -d --name rancher1.x --restart=unless-stopped -p 8080:8080 rancher/server:stable
 #for rancher 2.x
-docker run -d --name rancher --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher
+docker run -d --name rancher --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher:stable
+docker run -d --name rancher2.x --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher:stable
+docker run -d --restart=unless-stopped -p 80:80 -p 443:443 -v /docker_volume/rancher_home/rancher:/var/lib/rancher -v /docker_volume/rancher_home/auditlog:/var/log/auditlog --name rancher rancher/rancher:stable
 
 ```
 
@@ -31,4 +34,5 @@ sudo docker run -d --name rancher -v /home/dockerdata/rancher:/var/lib/mysql --r
 
 [Rancher 1.6 Docs](https://rancher.com/docs/rancher/v1.6/en/installing-rancher/installing-server/#rancher-server-tags)
 [Rancher 2.x Docs](https://rancher.com/docs/rancher/v2.x/en/)
-[Rancher - 管理內部及外部 (Azure) Docker Cluster 的好工具](https://columns.chicken-house.net/2016/04/29/rancher-on-azure-lab/)
+[Docker決戰到底(三) Rancher2.x的安裝與使用 - 簡書](h[Rancher 2.x 搭建及管理 Kubernetes 集群]ttps://www.itread01.com/content/1558078697.html)
+
