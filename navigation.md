@@ -20,6 +20,7 @@
 * [RancherOS](doc/rancheros.md)
 * [Rust](doc/rust.md)
 * [SQL](doc/sql.md)
+* [K8S](doc/k8s.md)
 * [Tensorflow](doc/tensorflow.md)
 * [Tool](doc/tool.md)
 * [Vim](doc/vim.md)
