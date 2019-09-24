@@ -24,5 +24,5 @@
 * [Tool](doc/tool.md)
 * [Vim](doc/vim.md)
 
-[Download](download.md)
+[Money](doc/money.md)
 [About](abort.md)
