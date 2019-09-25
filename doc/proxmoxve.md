@@ -2,7 +2,8 @@ Proxmox VE Notes
 =======
 
 
-
+[開源伺服器虛擬化平台：Proxmox VE (一)](https://ithelp.ithome.com.tw/m/articles/10220001)
+[開源伺服器虛擬化平台：Proxmox VE (二)](https://ithelp.ithome.com.tw/m/articles/10220451)
 
 Backup 
 ----------
