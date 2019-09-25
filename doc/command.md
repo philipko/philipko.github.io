@@ -127,6 +127,7 @@ ubuntu 14.04防火牆
 ```
 sudo ufw enable // 啟動防火牆，reboot還是存在直到關閉。
 sudo ufw disable // 停用防火牆，reboot還是存在直到再度開啟。
+sudo ufw reload //重新載入 UFW 設定
 
 sudo ufw default allow // 接收所以連線
 sudo ufw default deny // 關閉所有連線
