@@ -58,3 +58,16 @@ Untagged: my-image:0e5574283393
 ```
 
 [Docker 資源分配](https://roy051023.github.io/2019/03/25/Limit-Docker/)
+
+
+解決 Docker 造成 UFW 防火牆設定失效的方法
+----------
+
+習慣用下面第一行指令的方式來把 Container 的 port 給 Expose 到 Host，但是，比較安全且正確的作法應該是下第二行的方式，也就是要明確的把 IP 位址給指定出來哩 !
+```
+$ docker run -p 5984:5984 -d couchdb
+$ docker run -p 127.0.0.1:5984:5984 -d couchdb
+```
+
+[解決 Docker 造成 UFW 防火牆設定失效的方法](https://www.arthurtoday.com/2016/08/ufw-is-not-working-with-docker.html)
+[Docker 導致 UFW 設定失效](https://blog.36web.rocks/2016/07/08/docker-behind-ufw.html)
