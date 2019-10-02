@@ -96,6 +96,18 @@ The same git push all --all works here as well.
 
 [Able to push to all git remotes with the one command](https://stackoverflow.com/questions/5785549/able-to-push-to-all-git-remotes-with-the-one-command)
 
+
+git rm welcome.html --cached
+----------
+
+不管是系統的 rm 或是 git rm 指令，都會真的把這個檔案從工作目錄裡刪掉，
+但如果只是「我不是真的想把這個檔案刪掉，只是不想讓這個檔案再被 Git 控管了」的話，可以加上 --cached 參數：
+welcome.html 的狀態從原本已經在 Git 目錄裡的 tracked 變成 Untracked 了。
+
+[如何在 Git 裡刪除檔案或變更檔名？](https://gitbook.tw/chapters/using-git/rename-and-delete-file.html)
+
+
+
 好用連結
 ----------
 [Git 初學筆記 - 指令操作教學](https://blog.longwin.com.tw/2009/05/git-learn-initial-command-2009/)
