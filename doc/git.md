@@ -1,6 +1,17 @@
 Git Note
 =======
 
+commands
+----------
+
+```
+git config --global user.name <你的Repo.上傳顯示名稱>
+git config --global user.email <你的Repo.上傳顯示email名稱>
+git config --global core.editor "vim"
+
+```
+
+
 git branch graphs
 ----------
 
