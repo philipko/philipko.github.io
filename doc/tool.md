@@ -106,6 +106,8 @@ let g:tagbar_type_go = {
 
 ASCII art tools
 ----------
+  
+  * [PlantUML](http://plantuml.com/zh/)
 
   * [ASCIIFLOW](http://asciiflow.com/)
 
@@ -114,6 +116,9 @@ ASCII art tools
   * [activity-diagram](http://plantuml.com/zh/activity-diagram-beta )
 
   * [draw.io](https://www.draw.io)
+  
+  
+  
 
 Swagger
 ----------
