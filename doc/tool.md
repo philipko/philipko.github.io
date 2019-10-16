@@ -167,6 +167,7 @@ System
   * [MobaXterm：「十項全能」的遠程終端登錄軟件 SSH](https://twfunnews.com/mobaxterm/)
   * [WizTree](https://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/)
   * [Eversync](https://www.everhelper.me/synchronizer.php)
+  * [launchy windows hot key](http://www.launchy.net/)
   
   
   
