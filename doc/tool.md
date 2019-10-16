@@ -165,4 +165,9 @@ System
 
   * [SSHFS：透過 SSH 掛載遠端 Linux 伺服器上的硬碟（適用於 Windows、Mac OS X 與 Linux）](https://blog.gtwang.org/linux/sshfs-ssh-linux-windows-mac-os-x/)
   * [MobaXterm：「十項全能」的遠程終端登錄軟件 SSH](https://twfunnews.com/mobaxterm/)
+  * [WizTree](https://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/)
+  * [Eversync](https://www.everhelper.me/synchronizer.php)
+  
+  
+  
 
