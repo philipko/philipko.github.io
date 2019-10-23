@@ -15,6 +15,7 @@
 * [MQTT](doc/mqtt.md)
 * [Node](doc/node.md)
 * [PHP](doc/php.md)
+* [Postgresql](doc/postgresql.md)
 * [Proxmox VE](doc/proxmoxve.md)
 * [Python](doc/python.md)
 * [Rancher](doc/rancher.md)
