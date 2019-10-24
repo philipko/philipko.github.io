@@ -1,0 +1,220 @@
+====== PlantUML ======
+
+[[https://www.planttext.com/|PlantText線上版]]
+[[http://plantuml.com/zh/index|PlantUML語法說明]]
+[[http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000|PlantUML線上版]]
+
+====== Sequence Diagram ======
+[[http://plantuml.com/zh/sequence-diagram|語法參考]]
+
+<uml>
+scale 320X240
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+</uml>
+
+<code>
+<uml>
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+</uml>
+</code>
+
+
+<uml>
+actor Foo1
+boundary Foo2
+control Foo3
+entity Foo4
+database Foo5
+collections Foo6
+Foo1 -> Foo2 : To boundary
+Foo1 -> Foo3 : To control
+Foo1 -> Foo4 : To entity
+Foo1 -> Foo5 : To database
+Foo1 -> Foo6 : To collections
+</uml>
+
+<code>
+<uml>
+actor Foo1
+boundary Foo2
+control Foo3
+entity Foo4
+database Foo5
+collections Foo6
+Foo1 -> Foo2 : To boundary
+Foo1 -> Foo3 : To control
+Foo1 -> Foo4 : To entity
+Foo1 -> Foo5 : To database
+Foo1 -> Foo6 : To collections
+</uml>
+</code>
+====== Deployment Diagram ======
+[[http://plantuml.com/zh/deployment-diagram|語法參考]]
+
+
+<uml>
+node node1
+node node2
+node node3
+node node4
+node node5
+node1 -- node2
+node1 .. node3
+node1 ~~ node4
+node1 == node5
+</uml>
+<code>
+<uml>
+node node1
+node node2
+node node3
+node node4
+node node5
+node1 -- node2
+node1 .. node3
+node1 ~~ node4
+node1 == node5
+</uml>
+</code>
+
+<uml>
+actor actor
+agent agent
+artifact artifact
+boundary boundary
+card card
+cloud cloud
+component component
+control control
+database database
+entity entity
+file file
+folder folder
+frame frame
+interface  interface
+node node
+package package
+queue queue
+stack stack
+rectangle rectangle
+storage storage
+usecase usecase
+</uml>
+
+<code>
+
+<uml>
+actor actor
+agent agent
+artifact artifact
+boundary boundary
+card card
+cloud cloud
+component component
+control control
+database database
+entity entity
+file file
+folder folder
+frame frame
+interface  interface
+node node
+package package
+queue queue
+stack stack
+rectangle rectangle
+storage storage
+usecase usecase
+</uml>
+</code>
+
+====== Component Diagram ======
+[[http://plantuml.com/zh/component-diagram|語法參考]]
+
+<uml>
+
+package "Some Group" {
+  HTTP - [First Component]
+  [Another Component]
+}
+ 
+node "Other Groups" {
+  FTP - [Second Component]
+  [First Component] --> FTP
+} 
+
+cloud {
+  [Example 1]
+}
+
+
+database "MySql" {
+  folder "This is my folder" {
+	[Folder 3]
+  }
+  frame "Foo" {
+	[Frame 4]
+  }
+}
+
+
+[Another Component] --> [Example 1]
+[Example 1] --> [Folder 3]
+[Folder 3] --> [Frame 4]
+
+</uml>
+<code>
+<uml>
+package "Some Group" {
+  HTTP - [First Component]
+  [Another Component]
+} 
+node "Other Groups" {
+  FTP - [Second Component]
+  [First Component] --> FTP
+} 
+cloud {
+  [Example 1]
+}
+database "MySql" {
+  folder "This is my folder" {
+	[Folder 3]
+  }
+  frame "Foo" {
+	[Frame 4]
+  }
+}
+[Another Component] --> [Example 1]
+[Example 1] --> [Folder 3]
+[Folder 3] --> [Frame 4]
+</uml>
+</code>
+
+
+<uml>
+scale 800X600
+[Component1] as 1
+[Component2] as 2
+[Component3] as 3
+1 --> 2:<font color=red><b>Message 0
+1 -[#blue]-> 3:ftp 
+</uml>
+
+<code>
+<uml>
+scale 800X600
+[Component1] as 1
+[Component2] as 2
+[Component3] as 3
+1 --> 2:<font color=red><b>Message 0
+1 -[#blue]-> 3:ftp 
+</uml>
+</code>

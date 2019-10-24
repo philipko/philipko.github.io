@@ -16,3 +16,11 @@ philipko.github.io_run:
 philipko.github.io_clone:
 	git clone https://philipko@github.com/philipko/philipko.github.io.git
 	git clone https://philipkotw@bitbucket.org/philipkotw/philipko.github.io.git
+
+dokuwiki_run:
+	#login user:superuser password:bitnami1
+	docker run -d -p 80:80 -p 443:443 --restart=always --name dokuwiki -v $(shell pwd)/wiki:/bitnami bitnami/dokuwiki:latest
+dokuwiki_symbolic_link_pages:
+	rm -rf wiki/dokuwiki/data/pages
+	cd ./wiki/dokuwiki/data;ln -s ../../pages pages
+

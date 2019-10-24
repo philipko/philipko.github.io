@@ -1,0 +1,12 @@
+**Tools**
+  * [[tool:dokuwikiplugin|Dokuwiki Plugin]]
+  * [[tool:plantuml|PlantUML]]
+
+**Wiki 語法&參考 **
+  * [[playground:playground|語法測試PlayGround]]
+  * [[wiki:dokuwiki|dockuwi]]
+  * [[wiki:syntax|syntax]]
+  * [[wiki:welcome|welcome]]
+  * [[https://caslab.ee.ncku.edu.tw/dokuwiki/start|Lab(可參考)]]
+  * [[https://www.dokuwiki.org/dokuwiki|dockuwiki(可參考)]]
+
